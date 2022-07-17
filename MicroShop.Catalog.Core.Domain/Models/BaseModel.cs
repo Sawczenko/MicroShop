@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MicroShop.Catalog.Core.Domain.Models.Models
 {
-    internal class BaseModel
+    public class BaseModel
     {
+        public Guid Id { get; set; }
     }
 }
