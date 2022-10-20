@@ -1,4 +1,4 @@
-using MicroShop.Catalog.Code.Domain.Application;
+using MicroShop.Catalog.Core.Application.Features;
 
 var builder = WebApplication.CreateBuilder(args);
 
