@@ -11,10 +11,7 @@ namespace MicroShop.Catalog.Database.Entities.Products
         public string ProductName { get; set; }
 
         [Required]
-        public string Description { get; set; }
-
-        [Required]
-        public decimal Price { get; set; }
+        public float Price { get; set; }
 
         [Required]
         public string PictureUrl { get; set; }
@@ -30,5 +27,8 @@ namespace MicroShop.Catalog.Database.Entities.Products
 
         [Required]
         public  int ProductBrandID { get; set; }
+
+        [Required]
+        public string Description { get; set; }
     }
 }

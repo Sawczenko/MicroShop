@@ -1,6 +1,7 @@
 ﻿using MicroShop.Catalog.Database.Entities.Products;
 using MicroShop.Catalog.Database.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using ProductType = MicroShop.Catalog.Database.Entities.Products.ProductType;
 
 namespace MicroShop.Catalog.Database.Contexts
 {
@@ -12,6 +13,9 @@ namespace MicroShop.Catalog.Database.Contexts
         public virtual DbSet<ProductBrand> ProductBrands { get; set; }
 
         public virtual DbSet<ProductType> ProductTypes { get; set; }
+
+        public CatalogDbContext(DbContextOptions<CatalogDbContext> options) 
+            : base(options) { }
 
     }
 }
