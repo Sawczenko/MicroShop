@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MicroShop.Catalog.Core.Application.Features
 {
@@ -6,7 +7,10 @@ namespace MicroShop.Catalog.Core.Application.Features
     {
         public static void AddFeatures(this IServiceCollection services)
         {
-            services.AddMediator();
+            services.AddMediator(options =>
+            {
+                options.ServiceLifetime = ServiceLifetime.Scoped;
+            });
         }
     }
 }
