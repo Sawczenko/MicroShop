@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Mediator;
 
 namespace MicroShop.Catalog.API.Controllers
 {
-    public class ProductTypesController : ControllerBase
+    public class ProductTypesController : BaseApiController
     {
+        public ProductTypesController(IMediator mediator) 
+            : base(mediator) { }
     }
 }

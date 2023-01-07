@@ -3,9 +3,7 @@ using MicroShop.Catalog.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.ConfigureAppConfiguration((builder) => {
-    builder.AddJsonFile("Properties/appsettings.json");
-});
+builder.Configuration.AddJsonFile("Properties/appsettings.json");
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -14,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddFeatures();
+
 builder.Services.AddCatalogDatabase(builder.Configuration);
 
 var app = builder.Build();
@@ -21,6 +20,11 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseCors(policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+
     app.UseSwagger();
     app.UseSwaggerUI();
 }
