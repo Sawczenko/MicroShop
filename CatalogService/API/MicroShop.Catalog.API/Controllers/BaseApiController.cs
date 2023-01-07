@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Mediator;
 
 namespace MicroShop.Catalog.API.Controllers
 {
@@ -6,6 +7,13 @@ namespace MicroShop.Catalog.API.Controllers
     [ApiController]
     public abstract class BaseApiController : ControllerBase
     {
+        protected readonly IMediator Mediator;
+
+
+        public BaseApiController(IMediator mediator)
+        {
+            Mediator = mediator;
+        }
 
     }
 }

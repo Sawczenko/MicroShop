@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mediator.Abstractions" Version="2.0.27-rc" />
+    <PackageReference Include="Mediator.SourceGenerator" Version="2.0.27-rc">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MicroShop.Catalog.Core.Application.Abstractions\MicroShop.Catalog.Core.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database.Models\MicroShop.Catalog.Database.Entities.csproj" />
+    <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database\MicroShop.Catalog.Database.csproj" />
+    <ProjectReference Include="..\MicroShop.Catalog.Core.Application.Abstractions\MicroShop.Catalog.Core.Application.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

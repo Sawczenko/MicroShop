@@ -1,4 +1,4 @@
 ﻿namespace MicroShop.Catalog.Database.Interfaces
 {
-    internal interface ICatalogDbContext : IDbContext { }
+    public interface ICatalogDbContext : IDbContext { }
 }

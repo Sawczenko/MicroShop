@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mediator.Abstractions" Version="1.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database\MicroShop.Catalog.Database.csproj" />
+    <ProjectReference Include="..\MicroShop.Catalog.Core.Application.Models\MicroShop.Catalog.Core.Application.Models.csproj" />
+  </ItemGroup>
+
+</Project>

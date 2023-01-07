@@ -1,4 +1,6 @@
-﻿using MicroShop.Catalog.Database.Models.Base;
+﻿using MicroShop.Catalog.Database.Entities.ProductBrands;
+using MicroShop.Catalog.Database.Entities.ProductTypes;
+using MicroShop.Catalog.Database.Models.Base;
 using System.ComponentModel.DataAnnotations;
 
 #nullable disable
