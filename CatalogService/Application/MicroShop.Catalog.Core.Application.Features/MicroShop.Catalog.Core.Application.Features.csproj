@@ -16,6 +16,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\MicroShop.Catalog.Core.Application.Abstractions\MicroShop.Catalog.Core.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database.Models\MicroShop.Catalog.Database.Entities.csproj" />
+    <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database\MicroShop.Catalog.Database.csproj" />
+    <ProjectReference Include="..\MicroShop.Catalog.Core.Application.Abstractions\MicroShop.Catalog.Core.Application.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

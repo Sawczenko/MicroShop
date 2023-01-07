@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CatalogService\Resources\MicroShop.Catalog.Database\MicroShop.Catalog.Database.csproj" />
+    <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database\MicroShop.Catalog.Database.csproj" />
     <ProjectReference Include="..\MicroShop.Catalog.Core.Application.Models\MicroShop.Catalog.Core.Application.Models.csproj" />
   </ItemGroup>
 
