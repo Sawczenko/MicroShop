@@ -1,18 +1,17 @@
-﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces;
-using MicroShop.Catalog.Database.Interfaces;
+﻿using MicroShop.Catalog.Database.Interfaces;
+using Mediator;
 
 namespace MicroShop.Catalog.Core.Application.Abstractions.Handlers;
 
-public abstract class QueryHandlerBase<TRequest, TResponse, TDbContext> : IQueryRequestHandler<TRequest, TResponse>
-    where TRequest : IQueryRequest<TResponse>
-    where TDbContext : IDbContext
+public abstract class QueryHandlerBase<TQuery, TResponse> : IQueryHandler<TQuery, TResponse>
+    where TQuery : IQuery<TResponse>
 {
-    protected readonly TDbContext DbContext;
+    protected readonly ICatalogDbContext DbContext;
 
-    protected QueryHandlerBase(TDbContext dbContext)
+    protected QueryHandlerBase(ICatalogDbContext dbContext)
     {
         DbContext = dbContext;
     }
 
-    public abstract ValueTask<TResponse> Handle(TRequest request, CancellationToken cancellationToken);
+    public abstract ValueTask<TResponse> Handle(TQuery query, CancellationToken cancellationToken);
 }

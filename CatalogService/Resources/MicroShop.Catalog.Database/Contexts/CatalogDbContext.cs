@@ -1,7 +1,8 @@
 ﻿using MicroShop.Catalog.Database.Entities.Products;
 using MicroShop.Catalog.Database.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using ProductType = MicroShop.Catalog.Database.Entities.Products.ProductType;
+using MicroShop.Catalog.Database.Entities.ProductBrands;
+using MicroShop.Catalog.Database.Entities.ProductTypes;
 
 namespace MicroShop.Catalog.Database.Contexts
 {
