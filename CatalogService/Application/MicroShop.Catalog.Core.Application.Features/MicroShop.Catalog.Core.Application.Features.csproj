@@ -7,18 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Mediator.Abstractions" Version="2.0.27-rc" />
-    <PackageReference Include="Mediator.SourceGenerator" Version="2.0.27-rc">
+    <PackageReference Include="Mediator.Abstractions" Version="2.1.0-preview.10" />
+    <PackageReference Include="Mediator.SourceGenerator" Version="2.1.0-preview.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MicroShop.Catalog.Core.Application.Abstractions\MicroShop.Catalog.Core.Application.Abstractions.csproj" />
     <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database.Models\MicroShop.Catalog.Database.Entities.csproj" />
     <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database\MicroShop.Catalog.Database.csproj" />
     <ProjectReference Include="..\MicroShop.Catalog.Core.Application.Abstractions\MicroShop.Catalog.Core.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\MicroShop.Catalog.Core.Application.Extensions\MicroShop.Catalog.Core.Application.Extensions.csproj" />
+    <ProjectReference Include="..\MicroShop.Catalog.Core.Application.Models\MicroShop.Catalog.Core.Application.Models.csproj" />
   </ItemGroup>
 
 </Project>
