@@ -1,18 +1,21 @@
-﻿using MicroShop.Catalog.Core.Application.Abstractions.Handlers;
+﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces;
+using MicroShop.Catalog.Core.Application.Abstractions.Handlers;
 using MicroShop.Catalog.Database.Entities.Products;
+using MicroShop.Catalog.Core.Application.Extensions;
+using MicroShop.Catalog.Core.Application.Models;
 using MicroShop.Catalog.Database.Interfaces;
-using Microsoft.EntityFrameworkCore;
 
 namespace MicroShop.Catalog.Core.Application.Features.Products.Queries.GetProducts;
 
-internal sealed class GetProductsQueryHandler : PaginationQueryHandlerBase<GetProductsQuery, ICollection<Product>>
+internal sealed class GetProductsQueryHandler : PaginationQueryHandlerBase<GetProductsQuery, PagedList<Product>>
 {
-    public GetProductsQueryHandler(ICatalogDbContext dbContext) 
-        : base(dbContext) { }
-
-    public override async ValueTask<ICollection<Product>> Handle(GetProductsQuery query, CancellationToken cancellationToken)
+    public GetProductsQueryHandler(ICatalogDbContext dbContext, IPagination pagination) : base(dbContext, pagination)
     {
-        var products = await DbContext.Set<Product>().Skip(query.Pagination.PageSize).ToListAsync(cancellationToken);
+    }
+
+    public override async ValueTask<PagedList<Product>> Handle(GetProductsQuery query, CancellationToken cancellationToken)
+    {
+        var products = await DbContext.Set<Product>().ToPagedListAsync(Pagination.CurrentPage, Pagination.PageSize);
 
         return products;
     }

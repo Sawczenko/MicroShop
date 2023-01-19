@@ -1,5 +1,4 @@
 ﻿using MicroShop.Catalog.Core.Application.Features.Products.Queries.GetProducts;
-using MicroShop.Catalog.Core.Application.Models;
 using Microsoft.AspNetCore.Mvc;
 using Mediator;
 
@@ -13,10 +12,7 @@ namespace MicroShop.Catalog.API.Controllers
         [HttpGet("")]
         public async Task<IActionResult> GetProducts(CancellationToken cancellationToken)
         {
-            var pagination = new Pagination();
-            pagination.PageSize = 3;
-
-            return Ok(await Mediator.Send(new GetProductsQuery(pagination), cancellationToken));
+            return Ok(await Mediator.Send(new GetProductsQuery(), cancellationToken));
         }
     }
 }

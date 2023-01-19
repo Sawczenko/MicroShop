@@ -1,3 +1,4 @@
+using MicroShop.Catalog.Core.Application.Pipelines;
 using MicroShop.Catalog.Core.Application.Features;
 using MicroShop.Catalog.Database;
 
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddPipelines();
 builder.Services.AddFeatures();
 
 builder.Services.AddCatalogDatabase(builder.Configuration);
