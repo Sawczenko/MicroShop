@@ -1,9 +1,8 @@
 using MicroShop.Catalog.Core.Application.Containers;
 using MicroShop.Catalog.Core.Application.Pipelines;
 using MicroShop.Catalog.Core.Application.Features;
-using MicroShop.Catalog.Database;
-using MicroShop.Catalog.Core.Application.Models;
 using MicroShop.Catalog.Core.Application.Services;
+using MicroShop.Catalog.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +14,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddPipelines();
 builder.Services.AddServices();
 builder.Services.AddContainers();

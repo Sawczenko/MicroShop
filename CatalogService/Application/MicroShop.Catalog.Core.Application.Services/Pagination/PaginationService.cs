@@ -1,6 +1,6 @@
 ﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Services;
 
-namespace MicroShop.Catalog.Core.Application.Abstractions.Pagination
+namespace MicroShop.Catalog.Core.Application.Services.Pagination
 {
     public class PaginationService : IPaginationService
     {

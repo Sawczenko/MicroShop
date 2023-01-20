@@ -11,6 +11,7 @@ namespace MicroShop.Catalog.Core.Application.Containers
         {
             services.AddScoped<IQueryServicesContainer, QueryServicesContainer>();
             services.AddScoped<IPaginationQueryServicesContainer, PaginationQueryServicesContainer>();
+            services.AddScoped<IManagerServicesContainer, ManagerServicesContainer>();
         }
 
     }

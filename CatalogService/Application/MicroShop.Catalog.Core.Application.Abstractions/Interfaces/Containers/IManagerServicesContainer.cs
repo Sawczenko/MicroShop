@@ -1,11 +1,14 @@
 ﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Services;
+using Mediator;
 
 namespace MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Containers
 {
-    public interface IPaginationQueryServicesContainer : IQueryServicesContainer
+    public interface IManagerServicesContainer
     {
 
-        public IPaginationService PaginationService { get; set; }
+        public IMapperService MapperService { get; set; }
+
+        public IMediator Mediator { get; set; }
 
     }
 }
