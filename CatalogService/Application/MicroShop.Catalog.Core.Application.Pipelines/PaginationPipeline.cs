@@ -1,6 +1,6 @@
-﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Requests;
-using MicroShop.Catalog.Core.Application.Abstractions.Interfaces;
-using MicroShop.Catalog.Core.Application.Models;
+﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Services;
+using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Requests;
+using MicroShop.Catalog.Core.Application.Abstractions.Pagination;
 using Microsoft.AspNetCore.Http;
 using Mediator;
 
@@ -10,36 +10,36 @@ namespace MicroShop.Catalog.Core.Application.Pipelines
         where TRequest : IPaginationQuery<TResponse>
     {
         private readonly IHttpContextAccessor httpContextAccessor;
-        private readonly IPagination pagination;
+        private readonly IPaginationService paginationService;
 
-        public PaginationPipeline(IHttpContextAccessor httpContextAccessor,IPagination pagination)
+        public PaginationPipeline(IHttpContextAccessor httpContextAccessor,IPaginationService paginationService)
         {
             this.httpContextAccessor = httpContextAccessor;
-            this.pagination = pagination;
+            this.paginationService = paginationService;
         }
 
         public async ValueTask<TResponse> Handle(TRequest message, CancellationToken cancellationToken, MessageHandlerDelegate<TRequest, TResponse> next)
         {
 
-            Pagination paginationFromHeader = GetPaginationFromHeader();
+            PaginationService paginationServiceFromHeader = GetPaginationFromHeader();
 
             var response = await next(message, cancellationToken);
 
             return response;
         }
 
-        private Pagination GetPaginationFromHeader()
+        private PaginationService GetPaginationFromHeader()
         {
             var headers = httpContextAccessor.HttpContext.Request.Headers;
 
-            var paginationExists = headers.ContainsKey("Pagination");
+            var paginationServiceExists = headers.ContainsKey("Pagination");
 
-            if (paginationExists)
+            if (paginationServiceExists)
             {
-                var pagination = headers["Pagination"];
+                var paginationService = headers["Pagination"];
             }
 
-            return new Pagination();
+            return new PaginationService();
         }
 
     }

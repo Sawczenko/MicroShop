@@ -1,18 +1,17 @@
-﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces;
-using MicroShop.Catalog.Core.Application.Containers.Interfaces;
-using MicroShop.Catalog.Database.Interfaces;
+﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Containers;
+using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Database;
+using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Services;
 
 namespace MicroShop.Catalog.Core.Application.Containers.Containers
 {
-    internal class PaginationQueryServicesContainer : IPaginationQueryServicesContainer
+    public class PaginationQueryServicesContainer : QueryServicesContainer, IPaginationQueryServicesContainer
     {
-        public IPagination IPagination { get ; set; }
-        public ICatalogDbContext CatalogDbContext { get ; set; }
 
-        public PaginationQueryServicesContainer(ICatalogDbContext catalogDbContext, IPagination pagination)
+        public IPaginationService Pagination { get; set; }
+
+        public PaginationQueryServicesContainer(ICatalogDbContext catalogDbContext, IPaginationService pagination) : base(catalogDbContext)
         {
-            CatalogDbContext = catalogDbContext;
-            IPagination = pagination;
+            Pagination = pagination;
         }
 
     }

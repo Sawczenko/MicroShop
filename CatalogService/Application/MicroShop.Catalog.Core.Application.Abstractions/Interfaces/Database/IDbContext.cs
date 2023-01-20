@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace MicroShop.Catalog.Database.Interfaces
+namespace MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Database
 {
     public interface IDbContext : IDisposable
     {

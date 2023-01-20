@@ -1,4 +1,6 @@
-﻿namespace MicroShop.Catalog.Core.Application.Models
+﻿using System.Collections;
+
+namespace MicroShop.Catalog.Core.Application.Models
 {
     public class PagedList<T> : IReadOnlyList<T>
     {
@@ -24,9 +26,9 @@
 
         public IEnumerator<T> GetEnumerator() => subset.GetEnumerator();
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return subset.GetEnumerator();
         }
     }
 }

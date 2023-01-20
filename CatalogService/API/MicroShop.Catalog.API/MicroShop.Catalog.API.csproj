@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Application\MicroShop.Catalog.Core.Application.Containers\MicroShop.Catalog.Core.Application.Containers.csproj" />
     <ProjectReference Include="..\..\Application\MicroShop.Catalog.Core.Application.Features\MicroShop.Catalog.Core.Application.Features.csproj" />
     <ProjectReference Include="..\..\Application\MicroShop.Catalog.Core.Application.Models\MicroShop.Catalog.Core.Application.Models.csproj" />
     <ProjectReference Include="..\..\Application\MicroShop.Catalog.Core.Application.Pipelines\MicroShop.Catalog.Core.Application.Pipelines.csproj" />
