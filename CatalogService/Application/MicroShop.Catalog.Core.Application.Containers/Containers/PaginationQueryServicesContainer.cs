@@ -4,14 +4,14 @@ using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Services;
 
 namespace MicroShop.Catalog.Core.Application.Containers.Containers
 {
-    public class PaginationQueryServicesContainer : QueryServicesContainer, IPaginationQueryServicesContainer
+    internal class PaginationQueryServicesContainer : QueryServicesContainer, IPaginationQueryServicesContainer
     {
 
-        public IPaginationService Pagination { get; set; }
+        public IPaginationService PaginationService { get; set; }
 
-        public PaginationQueryServicesContainer(ICatalogDbContext catalogDbContext, IPaginationService pagination) : base(catalogDbContext)
+        public PaginationQueryServicesContainer(ICatalogDbContext catalogDbContext, IPaginationService paginationService) : base(catalogDbContext)
         {
-            Pagination = pagination;
+            PaginationService = paginationService;
         }
 
     }

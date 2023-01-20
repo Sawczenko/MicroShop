@@ -1,6 +1,6 @@
-﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Services;
-using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Requests;
-using MicroShop.Catalog.Core.Application.Abstractions.Pagination;
+﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Requests.Queries;
+using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Services;
+using MicroShop.Catalog.Core.Application.Services.Pagination;
 using Microsoft.AspNetCore.Http;
 using Mediator;
 
@@ -23,6 +23,9 @@ namespace MicroShop.Catalog.Core.Application.Pipelines
 
             PaginationService paginationServiceFromHeader = GetPaginationFromHeader();
 
+            paginationService.CurrentPage = paginationServiceFromHeader.CurrentPage;
+            paginationService.PageSize = paginationServiceFromHeader.PageSize;
+
             var response = await next(message, cancellationToken);
 
             return response;
@@ -36,6 +39,7 @@ namespace MicroShop.Catalog.Core.Application.Pipelines
 
             if (paginationServiceExists)
             {
+                //TODO Parse From Json
                 var paginationService = headers["Pagination"];
             }
 
