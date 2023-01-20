@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using MicroShop.Catalog.Database.Interfaces;
+﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Database;
+using Microsoft.Extensions.DependencyInjection;
 using MicroShop.Catalog.Database.Contexts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;

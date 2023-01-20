@@ -8,10 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Mediator.Abstractions" Version="1.0.5" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database\MicroShop.Catalog.Database.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
   </ItemGroup>
 
 </Project>
