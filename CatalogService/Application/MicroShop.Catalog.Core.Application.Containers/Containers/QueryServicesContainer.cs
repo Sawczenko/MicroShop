@@ -1,5 +1,5 @@
-﻿using MicroShop.Catalog.Core.Application.Containers.Interfaces;
-using MicroShop.Catalog.Database.Interfaces;
+﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Containers;
+using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Database;
 
 namespace MicroShop.Catalog.Core.Application.Containers.Containers
 {

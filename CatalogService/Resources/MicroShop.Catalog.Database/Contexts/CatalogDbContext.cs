@@ -1,7 +1,7 @@
-﻿using MicroShop.Catalog.Database.Entities.ProductBrands;
+﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Database;
+using MicroShop.Catalog.Database.Entities.ProductBrands;
 using MicroShop.Catalog.Database.Entities.ProductTypes;
 using MicroShop.Catalog.Database.Entities.Products;
-using MicroShop.Catalog.Database.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace MicroShop.Catalog.Database.Contexts

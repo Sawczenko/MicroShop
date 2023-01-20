@@ -1,17 +1,15 @@
-﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces;
+﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Containers;
 using MicroShop.Catalog.Core.Application.Abstractions.Handlers;
-using MicroShop.Catalog.Database.Entities.Products;
 using MicroShop.Catalog.Core.Application.Extensions;
+using MicroShop.Catalog.Database.Entities.Products;
 using MicroShop.Catalog.Core.Application.Models;
-using MicroShop.Catalog.Database.Interfaces;
 
 namespace MicroShop.Catalog.Core.Application.Features.Products.Queries.GetProducts;
 
 internal sealed class GetProductsQueryHandler : PaginationQueryHandlerBase<GetProductsQuery, PagedList<Product>>
 {
-    public GetProductsQueryHandler(ICatalogDbContext dbContext, IPagination pagination) : base(dbContext, pagination)
-    {
-    }
+    public GetProductsQueryHandler(IPaginationQueryServicesContainer paginationQueryServicesContainer) 
+        : base(paginationQueryServicesContainer) { }
 
     public override async ValueTask<PagedList<Product>> Handle(GetProductsQuery query, CancellationToken cancellationToken)
     {

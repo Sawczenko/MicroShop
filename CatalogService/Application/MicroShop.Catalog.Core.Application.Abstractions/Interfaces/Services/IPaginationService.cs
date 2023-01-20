@@ -1,6 +1,6 @@
-﻿namespace MicroShop.Catalog.Core.Application.Abstractions.Interfaces
+﻿namespace MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Services
 {
-    public interface IPagination
+    public interface IPaginationService
     {
 
         public int Pages { get; set; }
