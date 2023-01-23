@@ -1,4 +1,4 @@
-﻿using MicroShop.Catalog.Core.Application.Features.Products.Queries.GetProducts;
+﻿using MicroShop.Catalog.Core.Application.Features.Products.Managers.GetProducts;
 using Microsoft.AspNetCore.Mvc;
 using Mediator;
 
@@ -12,7 +12,7 @@ namespace MicroShop.Catalog.API.Controllers
         [HttpGet("")]
         public async Task<IActionResult> GetProducts(CancellationToken cancellationToken)
         {
-            return Ok(await Mediator.Send(new GetProductsQuery(), cancellationToken));
+            return Ok(await Mediator.Send(new GetProductsManager(), cancellationToken));
         }
     }
 }
