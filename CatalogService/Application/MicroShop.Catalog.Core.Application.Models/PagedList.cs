@@ -8,9 +8,13 @@ namespace MicroShop.Catalog.Core.Application.Models
         public PagedList(IEnumerable<T> items, int count, int pageNumber, int pageSize)
         {
             PageNumber = pageNumber;
+            PageSize = pageSize;
             TotalPages = (int)Math.Ceiling(count / (double)pageSize);
             subset = items as IList<T> ?? new List<T>(items);
+            Count = subset.Count;
         }
+
+        public int PageSize { get; set; }
 
         public int PageNumber { get; }
 
@@ -20,7 +24,7 @@ namespace MicroShop.Catalog.Core.Application.Models
 
         public bool IsLastPage => PageNumber == TotalPages;
 
-        public int Count => subset.Count;
+        public int Count { get; set; }
 
         public T this[int index] => subset[index];
 
@@ -29,6 +33,12 @@ namespace MicroShop.Catalog.Core.Application.Models
         IEnumerator IEnumerable.GetEnumerator()
         {
             return subset.GetEnumerator();
+        }
+
+        public void Add(T item) 
+        {
+            subset.Add(item);
+            Count++;
         }
     }
 }

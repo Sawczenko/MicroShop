@@ -19,19 +19,24 @@ namespace MicroShop.Catalog.Core.Application.Abstractions.Handlers.Managers
             MapperService = managerServicesContainer.MapperService;
         }
 
-        public ValueTask<Unit> Handle(TManager request, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract ValueTask<Unit> Handle(TManager request, CancellationToken cancellationToken);
     }
 
     public abstract class ManagerHandlerBase<TManager, TResponse> : IManagerHandler<TManager, TResponse>
         where TManager : IManager<TResponse>
     {
-        public ValueTask<TResponse> Handle(TManager request, CancellationToken cancellationToken)
+
+        protected readonly IMediator Mediator;
+
+        protected readonly IMapperService MapperService;
+
+        protected ManagerHandlerBase(IManagerServicesContainer managerServicesContainer)
         {
-            throw new NotImplementedException();
+            Mediator = managerServicesContainer.Mediator;
+            MapperService = managerServicesContainer.MapperService;
         }
+
+        public abstract ValueTask<TResponse> Handle(TManager request, CancellationToken cancellationToken);
     }
 
 }

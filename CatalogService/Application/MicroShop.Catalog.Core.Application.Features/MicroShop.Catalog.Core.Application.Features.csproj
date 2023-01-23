@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\MicroShop.Catalog.Core.Application.DataTransferObjects\MicroShop.Catalog.Core.Application.DataTransferObjects.csproj" />
     <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database.Models\MicroShop.Catalog.Database.Entities.csproj" />
     <ProjectReference Include="..\MicroShop.Catalog.Core.Application.Abstractions\MicroShop.Catalog.Core.Application.Abstractions.csproj" />
     <ProjectReference Include="..\MicroShop.Catalog.Core.Application.Extensions\MicroShop.Catalog.Core.Application.Extensions.csproj" />

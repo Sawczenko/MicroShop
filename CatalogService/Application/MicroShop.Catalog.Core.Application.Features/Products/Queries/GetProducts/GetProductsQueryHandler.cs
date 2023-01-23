@@ -14,6 +14,7 @@ internal sealed class GetProductsQueryHandler : PaginationQueryHandlerBase<GetPr
     public override async ValueTask<PagedList<Product>> Handle(GetProductsQuery query, CancellationToken cancellationToken)
     {
         var products = await DbContext.Set<Product>()
+            .OrderBy(x => x.ProductName)
             .ToPagedListAsync(PaginationService.CurrentPage, PaginationService.PageSize);
 
         return products;
