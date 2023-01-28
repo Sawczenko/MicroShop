@@ -7,31 +7,45 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CatalogService", "CatalogSe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{DF1E8F44-F311-4D01-A5A0-40B706E9F569}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D51D053C-7576-4683-A0AF-8E6985ADFC91}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{F77CE2D0-D3CB-4AE4-B814-8185217C2F8A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{F42992F1-9332-4BB1-B11C-50DDC64E030E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.API", "CatalogService\API\MicroShop.Catalog.API\MicroShop.Catalog.API.csproj", "{B8532F49-009C-4E3C-8E18-F0B2FC6CB7E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.API", "src\CatalogService\API\MicroShop.Catalog.API\MicroShop.Catalog.API.csproj", "{B8532F49-009C-4E3C-8E18-F0B2FC6CB7E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Database", "CatalogService\Resources\MicroShop.Catalog.Database\MicroShop.Catalog.Database.csproj", "{0D4AFFC6-9EDD-481E-85C4-00DAA68FC9C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Database", "src\CatalogService\Resources\MicroShop.Catalog.Database\MicroShop.Catalog.Database.csproj", "{0D4AFFC6-9EDD-481E-85C4-00DAA68FC9C4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Database.Entities", "CatalogService\Resources\MicroShop.Catalog.Database.Models\MicroShop.Catalog.Database.Entities.csproj", "{88F70C94-B14C-4FBF-A8A7-17CF61E3EB1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Database.Entities", "src\CatalogService\Resources\MicroShop.Catalog.Database.Models\MicroShop.Catalog.Database.Entities.csproj", "{88F70C94-B14C-4FBF-A8A7-17CF61E3EB1F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Core.Application.Pipelines", "CatalogService\Application\MicroShop.Catalog.Core.Application.Pipelines\MicroShop.Catalog.Core.Application.Pipelines.csproj", "{E1015931-201E-4122-9657-F3865E9C588B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Application.Pipelines", "src\CatalogService\Application\MicroShop.Catalog.Core.Application.Pipelines\MicroShop.Catalog.Application.Pipelines.csproj", "{E1015931-201E-4122-9657-F3865E9C588B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Core.Application.Features", "CatalogService\Application\MicroShop.Catalog.Core.Application.Features\MicroShop.Catalog.Core.Application.Features.csproj", "{A010BEC5-60DE-4611-B498-5941DF0D1CE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Application.Features", "src\CatalogService\Application\MicroShop.Catalog.Core.Application.Features\MicroShop.Catalog.Application.Features.csproj", "{A010BEC5-60DE-4611-B498-5941DF0D1CE5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Core.Application.Abstractions", "CatalogService\Application\MicroShop.Catalog.Core.Application.Abstractions\MicroShop.Catalog.Core.Application.Abstractions.csproj", "{383CBB96-E9CB-418C-A324-D10051C1AB46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Application.Abstractions", "src\CatalogService\Application\MicroShop.Catalog.Core.Application.Abstractions\MicroShop.Catalog.Application.Abstractions.csproj", "{383CBB96-E9CB-418C-A324-D10051C1AB46}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Core.Application.Models", "CatalogService\Application\MicroShop.Catalog.Core.Application.Models\MicroShop.Catalog.Core.Application.Models.csproj", "{CBC9EE64-0769-416C-9747-DD60542E88BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Application.Models", "src\CatalogService\Application\MicroShop.Catalog.Core.Application.Models\MicroShop.Catalog.Application.Models.csproj", "{CBC9EE64-0769-416C-9747-DD60542E88BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Core.Application.Extensions", "CatalogService\Application\MicroShop.Catalog.Core.Application.Extensions\MicroShop.Catalog.Core.Application.Extensions.csproj", "{52264F0D-51E0-48CC-A578-A26A5D3D18B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Application.Extensions", "src\CatalogService\Application\MicroShop.Catalog.Core.Application.Extensions\MicroShop.Catalog.Application.Extensions.csproj", "{52264F0D-51E0-48CC-A578-A26A5D3D18B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Core.Application.Containers", "CatalogService\Application\MicroShop.Catalog.Core.Application.Containers\MicroShop.Catalog.Core.Application.Containers.csproj", "{02D30F3C-8CC6-41BD-9CF0-93F958035429}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Application.Containers", "src\CatalogService\Application\MicroShop.Catalog.Core.Application.Containers\MicroShop.Catalog.Application.Containers.csproj", "{02D30F3C-8CC6-41BD-9CF0-93F958035429}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.Catalog.Core.Application.Services", "CatalogService\Application\MicroShop.Catalog.Core.Application.Services\MicroShop.Catalog.Core.Application.Services.csproj", "{8F2139A4-89F1-4C1B-A3F5-373C554C55C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Application.Services", "src\CatalogService\Application\MicroShop.Catalog.Core.Application.Services\MicroShop.Catalog.Application.Services.csproj", "{8F2139A4-89F1-4C1B-A3F5-373C554C55C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Application.DataTransferObjects", "src\CatalogService\Application\MicroShop.Catalog.Core.Application.DataTransferObjects\MicroShop.Catalog.Application.DataTransferObjects.csproj", "{EDB87F06-BE70-4B5C-8998-CE6CB1738195}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroShop.Core", "MicroShop.Core", "{0FCA2418-BE92-4CBB-86A3-B88C698D8B85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{E0FE966B-8999-4F75-8074-AFEF29F82CAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.Core.Interfaces.Requests", "src\MicroShop.Core\Interfaces\MicroShop.Core.Interfaces.Requests\MicroShop.Core.Interfaces.Requests.csproj", "{CDA07276-356F-40DB-A413-E104E08DF993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.Core.Interfaces.RequestHandlers", "src\MicroShop.Core\Interfaces\MicroShop.Core.Interfaces.RequestHandlers\MicroShop.Core.Interfaces.RequestHandlers.csproj", "{ED8F8902-5376-475A-A451-41982183F7C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.Core.Interfaces.Containers", "src\MicroShop.Core\Interfaces\MicroShop.Core.Interfaces.Containers\MicroShop.Core.Interfaces.Containers.csproj", "{31D6FF19-983C-4871-8DB4-4A8BA4B2AF18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.Core.Interfaces.Database", "src\MicroShop.Core\Interfaces\MicroShop.Core.Interfaces.Database\MicroShop.Core.Interfaces.Database.csproj", "{54FFEFCB-9524-4C47-96F1-783FFD572351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.Core.Interfaces.Services", "src\MicroShop.Core\Interfaces\MicroShop.Core.Interfaces.Services\MicroShop.Core.Interfaces.Services.csproj", "{32174022-659C-49A2-825E-D78C17A2E590}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,15 +93,38 @@ Global
 		{8F2139A4-89F1-4C1B-A3F5-373C554C55C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F2139A4-89F1-4C1B-A3F5-373C554C55C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F2139A4-89F1-4C1B-A3F5-373C554C55C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB87F06-BE70-4B5C-8998-CE6CB1738195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB87F06-BE70-4B5C-8998-CE6CB1738195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB87F06-BE70-4B5C-8998-CE6CB1738195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB87F06-BE70-4B5C-8998-CE6CB1738195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA07276-356F-40DB-A413-E104E08DF993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA07276-356F-40DB-A413-E104E08DF993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA07276-356F-40DB-A413-E104E08DF993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA07276-356F-40DB-A413-E104E08DF993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED8F8902-5376-475A-A451-41982183F7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED8F8902-5376-475A-A451-41982183F7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED8F8902-5376-475A-A451-41982183F7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED8F8902-5376-475A-A451-41982183F7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D6FF19-983C-4871-8DB4-4A8BA4B2AF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D6FF19-983C-4871-8DB4-4A8BA4B2AF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D6FF19-983C-4871-8DB4-4A8BA4B2AF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D6FF19-983C-4871-8DB4-4A8BA4B2AF18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54FFEFCB-9524-4C47-96F1-783FFD572351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54FFEFCB-9524-4C47-96F1-783FFD572351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54FFEFCB-9524-4C47-96F1-783FFD572351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54FFEFCB-9524-4C47-96F1-783FFD572351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32174022-659C-49A2-825E-D78C17A2E590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32174022-659C-49A2-825E-D78C17A2E590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32174022-659C-49A2-825E-D78C17A2E590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32174022-659C-49A2-825E-D78C17A2E590}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DF1E8F44-F311-4D01-A5A0-40B706E9F569} = {78A0EE76-43A4-4874-AA94-C0DF1C3E5E1C}
-		{D51D053C-7576-4683-A0AF-8E6985ADFC91} = {78A0EE76-43A4-4874-AA94-C0DF1C3E5E1C}
 		{F77CE2D0-D3CB-4AE4-B814-8185217C2F8A} = {78A0EE76-43A4-4874-AA94-C0DF1C3E5E1C}
-		{F42992F1-9332-4BB1-B11C-50DDC64E030E} = {D51D053C-7576-4683-A0AF-8E6985ADFC91}
+		{F42992F1-9332-4BB1-B11C-50DDC64E030E} = {78A0EE76-43A4-4874-AA94-C0DF1C3E5E1C}
 		{B8532F49-009C-4E3C-8E18-F0B2FC6CB7E5} = {DF1E8F44-F311-4D01-A5A0-40B706E9F569}
 		{0D4AFFC6-9EDD-481E-85C4-00DAA68FC9C4} = {F77CE2D0-D3CB-4AE4-B814-8185217C2F8A}
 		{88F70C94-B14C-4FBF-A8A7-17CF61E3EB1F} = {F77CE2D0-D3CB-4AE4-B814-8185217C2F8A}
@@ -98,6 +135,13 @@ Global
 		{52264F0D-51E0-48CC-A578-A26A5D3D18B6} = {F42992F1-9332-4BB1-B11C-50DDC64E030E}
 		{02D30F3C-8CC6-41BD-9CF0-93F958035429} = {F42992F1-9332-4BB1-B11C-50DDC64E030E}
 		{8F2139A4-89F1-4C1B-A3F5-373C554C55C8} = {F42992F1-9332-4BB1-B11C-50DDC64E030E}
+		{EDB87F06-BE70-4B5C-8998-CE6CB1738195} = {F42992F1-9332-4BB1-B11C-50DDC64E030E}
+		{E0FE966B-8999-4F75-8074-AFEF29F82CAA} = {0FCA2418-BE92-4CBB-86A3-B88C698D8B85}
+		{CDA07276-356F-40DB-A413-E104E08DF993} = {E0FE966B-8999-4F75-8074-AFEF29F82CAA}
+		{ED8F8902-5376-475A-A451-41982183F7C1} = {E0FE966B-8999-4F75-8074-AFEF29F82CAA}
+		{31D6FF19-983C-4871-8DB4-4A8BA4B2AF18} = {E0FE966B-8999-4F75-8074-AFEF29F82CAA}
+		{54FFEFCB-9524-4C47-96F1-783FFD572351} = {E0FE966B-8999-4F75-8074-AFEF29F82CAA}
+		{32174022-659C-49A2-825E-D78C17A2E590} = {E0FE966B-8999-4F75-8074-AFEF29F82CAA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0DE0740B-4B46-4C52-B442-7ECB58E06A51}
