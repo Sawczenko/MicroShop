@@ -47,6 +47,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Core.Interfaces.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Catalog.Application.Pipelines", "src\CatalogService\Application\MicroShop.Catalog.Application.Pipelines\MicroShop.Catalog.Application.Pipelines.csproj", "{CC8ADDAB-0E2A-4530-8598-E05DE7B7EEBF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.Core", "src\MicroShop.Core\MicroShop.Core\MicroShop.Core.csproj", "{2F5FE7AC-63C9-4478-AD61-00CA63820011}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{CC8ADDAB-0E2A-4530-8598-E05DE7B7EEBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC8ADDAB-0E2A-4530-8598-E05DE7B7EEBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC8ADDAB-0E2A-4530-8598-E05DE7B7EEBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F5FE7AC-63C9-4478-AD61-00CA63820011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F5FE7AC-63C9-4478-AD61-00CA63820011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F5FE7AC-63C9-4478-AD61-00CA63820011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F5FE7AC-63C9-4478-AD61-00CA63820011}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -142,6 +148,7 @@ Global
 		{54FFEFCB-9524-4C47-96F1-783FFD572351} = {E0FE966B-8999-4F75-8074-AFEF29F82CAA}
 		{32174022-659C-49A2-825E-D78C17A2E590} = {E0FE966B-8999-4F75-8074-AFEF29F82CAA}
 		{CC8ADDAB-0E2A-4530-8598-E05DE7B7EEBF} = {F42992F1-9332-4BB1-B11C-50DDC64E030E}
+		{2F5FE7AC-63C9-4478-AD61-00CA63820011} = {0FCA2418-BE92-4CBB-86A3-B88C698D8B85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0DE0740B-4B46-4C52-B442-7ECB58E06A51}

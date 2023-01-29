@@ -1,6 +1,7 @@
-﻿using MicroShop.Core.Interfaces.Containers.Managers;
+﻿using MediatR;
+using MicroShop.Core.Interfaces.Containers.Managers;
 using MicroShop.Core.Interfaces.Services;
-using MediatR;
+
 
 namespace MicroShop.Catalog.Application.Containers.Containers
 {

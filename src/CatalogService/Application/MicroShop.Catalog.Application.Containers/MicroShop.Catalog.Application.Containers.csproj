@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\MicroShop.Core\Interfaces\MicroShop.Core.Interfaces.Containers\MicroShop.Core.Interfaces.Containers.csproj" />
+    <ProjectReference Include="..\..\..\MicroShop.Core\Interfaces\MicroShop.Core.Interfaces.Services\MicroShop.Core.Interfaces.Services.csproj" />
   </ItemGroup>
 
 </Project>

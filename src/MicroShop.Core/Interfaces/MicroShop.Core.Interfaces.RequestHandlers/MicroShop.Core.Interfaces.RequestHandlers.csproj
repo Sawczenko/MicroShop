@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="11.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MicroShop.Core.Interfaces.Requests\MicroShop.Core.Interfaces.Requests.csproj" />
   </ItemGroup>
 
