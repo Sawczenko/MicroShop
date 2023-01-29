@@ -14,8 +14,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\MicroShop.Core\Interfaces\MicroShop.Core.Interfaces.Services\MicroShop.Core.Interfaces.Services.csproj" />
     <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database.Models\MicroShop.Catalog.Database.Entities.csproj" />
-    <ProjectReference Include="..\MicroShop.Catalog.Core.Application.DataTransferObjects\MicroShop.Catalog.Application.DataTransferObjects.csproj" />
-    <ProjectReference Include="..\MicroShop.Catalog.Core.Application.Models\MicroShop.Catalog.Application.Models.csproj" />
+    <ProjectReference Include="..\MicroShop.Catalog.Application.DataTransferObjects\MicroShop.Catalog.Application.DataTransferObjects.csproj" />
+    <ProjectReference Include="..\MicroShop.Catalog.Application.Models\MicroShop.Catalog.Application.Models.csproj" />
   </ItemGroup>
 
 </Project>
