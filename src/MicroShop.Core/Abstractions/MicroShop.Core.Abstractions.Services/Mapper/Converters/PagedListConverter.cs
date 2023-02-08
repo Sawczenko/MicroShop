@@ -1,4 +1,4 @@
-﻿using MicroShop.Catalog.Application.Models;
+﻿using MicroShop.Core.Models;
 using AutoMapper;
 
 namespace MicroShop.Catalog.Application.Services.Mapper.Converters

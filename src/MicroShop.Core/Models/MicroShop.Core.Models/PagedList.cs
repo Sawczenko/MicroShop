@@ -1,4 +1,4 @@
-﻿namespace MicroShop.Catalog.Application.Models
+﻿namespace MicroShop.Core.Models
 {
     public class PagedList<T>
     {
