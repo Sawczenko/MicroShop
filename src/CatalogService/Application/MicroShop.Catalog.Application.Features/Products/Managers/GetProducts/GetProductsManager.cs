@@ -1,6 +1,6 @@
 ﻿using MicroShop.Catalog.Application.DataTransferObjects;
 using MicroShop.Core.Interfaces.Requests.Managers;
-using MicroShop.Catalog.Application.Models;
+using MicroShop.Core.Models;
 
 namespace MicroShop.Catalog.Application.Features.Products.Managers.GetProducts
 {

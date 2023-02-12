@@ -13,14 +13,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MicroShop.Core\Interfaces\MicroShop.Core.Interfaces.Database\MicroShop.Core.Interfaces.Database.csproj" />
+    <ProjectReference Include="..\..\Application\Interfaces\MicroShop.Catalog.Application.Interfaces.Database\MicroShop.Catalog.Application.Interfaces.Database.csproj" />
     <ProjectReference Include="..\MicroShop.Catalog.Database.Models\MicroShop.Catalog.Database.Entities.csproj" />
   </ItemGroup>
 

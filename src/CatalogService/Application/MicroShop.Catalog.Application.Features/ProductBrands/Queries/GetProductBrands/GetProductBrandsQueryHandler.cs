@@ -1,4 +1,4 @@
-﻿using MicroShop.Catalog.Application.Abstractions.Handlers.Queries;
+﻿using MicroShop.Core.Abstractions.RequestHandlers.Queries;
 using MicroShop.Catalog.Database.Entities.ProductBrands;
 using MicroShop.Core.Interfaces.Containers.Queries;
 using Microsoft.EntityFrameworkCore;
@@ -12,7 +12,7 @@ namespace MicroShop.Catalog.Application.Features.ProductBrands.Queries.GetProduc
 
         public override async Task<ICollection<ProductBrand>> Handle(GetProductBrandsQuery request, CancellationToken cancellationToken)
         {
-            var productBrands = await DbContext.Set<ProductBrand>()
+            var productBrands = await QueryServicesContainer.DbContext.Set<ProductBrand>()
                 .ToListAsync(cancellationToken);
 
             return productBrands;

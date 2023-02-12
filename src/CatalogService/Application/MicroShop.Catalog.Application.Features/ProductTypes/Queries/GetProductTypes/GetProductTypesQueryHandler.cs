@@ -1,4 +1,4 @@
-﻿using MicroShop.Catalog.Application.Abstractions.Handlers.Queries;
+﻿using MicroShop.Core.Abstractions.RequestHandlers.Queries;
 using MicroShop.Catalog.Database.Entities.ProductTypes;
 using MicroShop.Core.Interfaces.Containers.Queries;
 

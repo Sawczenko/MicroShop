@@ -1,6 +1,6 @@
-﻿using MicroShop.Catalog.Core.Application.Abstractions.Interfaces.Requests.Queries;
-using MicroShop.Catalog.Database.Entities.Products;
-using MicroShop.Catalog.Application.Models;
+﻿using MicroShop.Catalog.Database.Entities.Products;
+using MicroShop.Core.Interfaces.Requests.Queries;
+using MicroShop.Core.Models;
 
 namespace MicroShop.Catalog.Application.Features.Products.Queries.GetProducts;
 

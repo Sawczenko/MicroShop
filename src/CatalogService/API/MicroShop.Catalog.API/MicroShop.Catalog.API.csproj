@@ -7,19 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Application\MicroShop.Catalog.Application.Containers\MicroShop.Catalog.Application.Containers.csproj" />
     <ProjectReference Include="..\..\Application\MicroShop.Catalog.Application.Features\MicroShop.Catalog.Application.Features.csproj" />
-    <ProjectReference Include="..\..\Application\MicroShop.Catalog.Application.Models\MicroShop.Catalog.Application.Models.csproj" />
-    <ProjectReference Include="..\..\Application\MicroShop.Catalog.Application.Pipelines\MicroShop.Catalog.Application.Pipelines.csproj" />
-    <ProjectReference Include="..\..\Application\MicroShop.Catalog.Application.Services\MicroShop.Catalog.Application.Services.csproj" />
     <ProjectReference Include="..\..\Resources\MicroShop.Catalog.Database\MicroShop.Catalog.Database.csproj" />
   </ItemGroup>
 

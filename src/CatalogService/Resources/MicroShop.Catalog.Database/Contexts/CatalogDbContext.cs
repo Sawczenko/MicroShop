@@ -1,12 +1,12 @@
 ﻿using MicroShop.Catalog.Database.Entities.ProductBrands;
+using MicroShop.Catalog.Application.Interfaces.Database;
 using MicroShop.Catalog.Database.Entities.ProductTypes;
 using MicroShop.Catalog.Database.Entities.Products;
-using MicroShop.Core.Interfaces.Database;
 using Microsoft.EntityFrameworkCore;
 
 namespace MicroShop.Catalog.Database.Contexts
 {
-    internal class CatalogDbContext : DbContext, IDbContext
+    internal class CatalogDbContext : DbContext, ICatalogDbContext
     {
 
         public virtual DbSet<Product> Products { get; set; }

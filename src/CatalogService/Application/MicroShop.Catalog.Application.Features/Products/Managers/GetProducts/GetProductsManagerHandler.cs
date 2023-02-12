@@ -1,8 +1,8 @@
 ﻿using MicroShop.Catalog.Application.Features.Products.Queries.GetProducts;
-using MicroShop.Catalog.Application.Abstractions.Handlers.Managers;
+using MicroShop.Core.Abstractions.RequestHandlers.Managers;
 using MicroShop.Catalog.Application.DataTransferObjects;
 using MicroShop.Core.Interfaces.Containers.Managers;
-using MicroShop.Catalog.Application.Models;
+using MicroShop.Core.Models;
 
 namespace MicroShop.Catalog.Application.Features.Products.Managers.GetProducts
 {
@@ -13,9 +13,9 @@ namespace MicroShop.Catalog.Application.Features.Products.Managers.GetProducts
 
         public override async Task<PagedList<ProductDto>> Handle(GetProductsManager request, CancellationToken cancellationToken)
         {
-            var products = await Mediator.Send(new GetProductsQuery(), cancellationToken);
+            var products = await ManagerServicesContainer.Mediator.Send(new GetProductsQuery(), cancellationToken);
 
-            return MapperService.Map<PagedList<ProductDto>>(products);
+            return ManagerServicesContainer.MapperService.Map<PagedList<ProductDto>>(products);
         }
     }
 }
