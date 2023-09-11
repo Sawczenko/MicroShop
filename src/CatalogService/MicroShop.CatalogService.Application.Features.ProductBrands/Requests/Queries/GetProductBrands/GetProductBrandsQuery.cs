@@ -1,4 +1,4 @@
-﻿using MicroShop.Catalog.Application.Entities.ProductBrands;
+﻿using MicroShop.CatalogService.Domain.Entities.ProductBrands;
 using MicroShop.Core.Interfaces.Requests.Query;
 
 namespace MicroShop.Catalog.Application.Features.ProductBrands.Queries.GetProductBrands

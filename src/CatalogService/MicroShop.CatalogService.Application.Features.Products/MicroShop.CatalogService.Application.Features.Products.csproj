@@ -8,13 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.1.1" />
-    <PackageReference Include="MicroShop.Core" Version="1.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="MicroShop.Core" Version="1.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MicroShop.CatalogService.Application.DataTransferObjects\MicroShop.CatalogService.Application.DataTransferObjects.csproj" />
-    <ProjectReference Include="..\MicroShop.CatalogService.Core.Abstractions\MicroShop.CatalogService.Core.Abstractions.csproj" />
+    <ProjectReference Include="..\MicroShop.CatalogService.Core.Abstractions.Requests\MicroShop.CatalogService.Core.Abstractions.Requests.csproj" />
     <ProjectReference Include="..\MicroShop.CatalogService.Domain.Entities\MicroShop.CatalogService.Domain.Entities.csproj" />
   </ItemGroup>
 

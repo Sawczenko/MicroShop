@@ -1,4 +1,9 @@
+using MicroShop.CatalogService.Application.Features.Products;
+using MicroShop.CatalogService.Core.Containers;
 using MicroShop.Catalog.Application.Services;
+using MicroShop.Core;
+using MicroShop.CatalogService.Application.Features.ProductTypes;
+using MicroShop.CatalogService.Application.Features.ProductBrands;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +19,13 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddCatalogDatabase(builder.Configuration);
 builder.Services.AddMapper();
+builder.Services.AddContainers();
+builder.Services.AddProducts();
+builder.Services.AddProductTypes();
+builder.Services.AddProductBrands();
+
+builder.Services.UseMicroShopCore(AppDomain.CurrentDomain.GetAssemblies());
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -26,6 +38,8 @@ if (app.Environment.IsDevelopment())
 
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    app.SeedDatabase();
 }
 
 app.UseHttpsRedirection();

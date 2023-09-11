@@ -22,13 +22,13 @@ namespace MicroShop.CatalogService.Domain.Entities.Products
         public virtual ProductType ProductType { get; set; }
 
         [Required]
-        public int ProductTypeID { get; set; }
+        public int ProductTypeId { get; set; }
 
         [Required]
         public virtual ProductBrand ProductBrand { get; set; }
 
         [Required]
-        public int ProductBrandID { get; set; }
+        public int ProductBrandId { get; set; }
 
         [Required]
         public string Description { get; set; }
