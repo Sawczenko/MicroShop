@@ -5,11 +5,18 @@ using MicroShop.Core;
 using MicroShop.CatalogService.Application.Features.ProductTypes;
 using MicroShop.CatalogService.Application.Features.ProductBrands;
 
+using OpenTelemetry;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
+using MicroShop.Catalog.API.Controllers;
+using MicroShop.Core.Features.Telemetry;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddJsonFile("Properties/appsettings.json");
 // Add services to the container.
 
+builder.Services.AddLogging();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
@@ -24,7 +31,11 @@ builder.Services.AddProducts();
 builder.Services.AddProductTypes();
 builder.Services.AddProductBrands();
 
-builder.Services.UseMicroShopCore(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.UseMicroShopCore(AppDomain.CurrentDomain.GetAssemblies()).WithTelemetry(config =>
+{
+    config.ServiceVersion = "1.0";
+    config.ServiceName = "CatalogService";
+});
 
 var app = builder.Build();
 

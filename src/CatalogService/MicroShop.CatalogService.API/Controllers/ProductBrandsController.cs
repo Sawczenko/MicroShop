@@ -12,7 +12,7 @@ namespace MicroShop.Catalog.API.Controllers
         [HttpGet("")]
         public async Task<IActionResult> GetProductBrands(CancellationToken cancellationToken)
         {
-            return await ExecuteManager(new GetProductBrandsManager(), cancellationToken);
+            return await ExecuteManager(new GetProductBrandsManager(), cancellationToken); ;
         }
     }
 }

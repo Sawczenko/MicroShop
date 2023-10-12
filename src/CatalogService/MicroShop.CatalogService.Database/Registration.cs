@@ -18,6 +18,7 @@ public static class Registration
                 options.UseSqlServer(configuration.GetConnectionString("CatalogService"));
 #endif          
         });
+        services.AddScoped<IDbContext, CatalogDbContext>();
         services.AddScoped<ICatalogDbContext, CatalogDbContext>();
     }
 
