@@ -3,7 +3,6 @@ using MicroShop.CatalogService.Core.Abstractions.Requests.Requests.Query;
 using MicroShop.CatalogService.Core.Interfaces.Database;
 using MicroShop.CatalogService.Domain.Entities.ProductTypes;
 using MicroShop.Core.Interfaces.Containers.Requests.Query;
-using MicroShop.Core.Interfaces.Database;
 using Microsoft.EntityFrameworkCore;
 
 namespace MicroShop.Catalog.Application.Features.Queries.ProductTypes.GetProductTypes

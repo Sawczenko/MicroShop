@@ -1,15 +1,10 @@
+using MicroShop.CatalogService.Application.Features.ProductBrands;
+using MicroShop.CatalogService.Application.Features.ProductTypes;
 using MicroShop.CatalogService.Application.Features.Products;
 using MicroShop.CatalogService.Core.Containers;
 using MicroShop.Catalog.Application.Services;
-using MicroShop.Core;
-using MicroShop.CatalogService.Application.Features.ProductTypes;
-using MicroShop.CatalogService.Application.Features.ProductBrands;
-
-using OpenTelemetry;
-using OpenTelemetry.Resources;
-using OpenTelemetry.Trace;
-using MicroShop.Catalog.API.Controllers;
 using MicroShop.Core.Features.Telemetry;
+using MicroShop.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,6 +30,7 @@ builder.Services.UseMicroShopCore(AppDomain.CurrentDomain.GetAssemblies()).WithT
 {
     config.ServiceVersion = "1.0";
     config.ServiceName = "CatalogService";
+    config.OtlpEndpoint = "http://localhost:4317";
 });
 
 var app = builder.Build();
