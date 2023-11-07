@@ -2,7 +2,7 @@
 using MicroShop.Core.Interfaces.Containers.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MicroShop.Catalog.API.Controllers
+namespace MicroShop.CatalogService.API.Controllers
 {
     public class ProductBrandsController : BaseApiController
     {
@@ -12,7 +12,7 @@ namespace MicroShop.Catalog.API.Controllers
         [HttpGet("")]
         public async Task<IActionResult> GetProductBrands(CancellationToken cancellationToken)
         {
-            return await ExecuteManager(new GetProductBrandsManager(), cancellationToken); ;
+            return await ExecuteManager(new GetProductBrandsManager(), cancellationToken);
         }
     }
 }

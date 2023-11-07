@@ -10,9 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.9" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MicroShop.IdentityService.Application.Features.Authentication\MicroShop.IdentityService.Application.Features.Authentication.csproj" />
+    <ProjectReference Include="..\MicroShop.IdentityService.Application.Features.Identity\MicroShop.IdentityService.Application.Features.Identity.csproj" />
+    <ProjectReference Include="..\MicroShop.IdentityService.Application.Services.Mapper\MicroShop.IdentityService.Application.Services.Mapper.csproj" />
+    <ProjectReference Include="..\MicroShop.IdentityService.Core.Containers\MicroShop.IdentityService.Core.Containers.csproj" />
   </ItemGroup>
 
 </Project>

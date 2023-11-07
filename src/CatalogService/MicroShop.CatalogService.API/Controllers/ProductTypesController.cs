@@ -1,5 +1,6 @@
 ﻿using MicroShop.CatalogService.Application.Features.ProductTypes.Requests.Managers.GetProductTypes;
 using MicroShop.Core.Interfaces.Containers.Controllers;
+using MicroShop.CatalogService.API.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MicroShop.Catalog.API.Controllers

@@ -19,7 +19,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
 
-builder.Services.AddCatalogDatabase(builder.Configuration);
+builder.Services.AddDatabase(builder.Configuration);
 builder.Services.AddMapper();
 builder.Services.AddContainers();
 builder.Services.AddProducts();

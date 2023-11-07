@@ -49,27 +49,39 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityService", "Identity
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{9E81BFD2-9FDE-4D96-9A75-FD95BE86AB81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.IdentityService.API", "src\IdentityService\MicroShop.IdentityService.API\MicroShop.IdentityService.API.csproj", "{E849C9B5-CC2F-4E5C-93F0-8D0C567C9445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.IdentityService.API", "src\IdentityService\MicroShop.IdentityService.API\MicroShop.IdentityService.API.csproj", "{E849C9B5-CC2F-4E5C-93F0-8D0C567C9445}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B5F2F0BB-9085-4098-AF9E-3F1F378F586B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{179155D7-0935-4601-874D-D590E65CDE6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.IdentityService.Core.Interfaces.Database", "src\IdentityService\MicroShop.IdentityService.Core.Interfaces.Database\MicroShop.IdentityService.Core.Interfaces.Database.csproj", "{556AD6E0-0870-4B54-8C7C-609AE49097CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.IdentityService.Core.Interfaces.Database", "src\IdentityService\MicroShop.IdentityService.Core.Interfaces.Database\MicroShop.IdentityService.Core.Interfaces.Database.csproj", "{556AD6E0-0870-4B54-8C7C-609AE49097CC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{1E1450A4-7B15-42B7-9EF4-3F651C893B36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.IdentityService.Database", "src\IdentityService\MicroShop.IdentityService.Database\MicroShop.IdentityService.Database.csproj", "{D4611953-D4CC-4CE3-ADD7-D1D12E6724D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.IdentityService.Database", "src\IdentityService\MicroShop.IdentityService.Database\MicroShop.IdentityService.Database.csproj", "{D4611953-D4CC-4CE3-ADD7-D1D12E6724D7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FA8E50E7-EFDB-4BE6-902C-EA8CE775BC73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.IdentityService.Domain.Entities", "src\IdentityService\MicroShop.IdentityService.Domain.Entities\MicroShop.IdentityService.Domain.Entities.csproj", "{1EFD56EC-0FDA-4179-8D88-2AA677915A8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.IdentityService.Domain.Entities", "src\IdentityService\MicroShop.IdentityService.Domain.Entities\MicroShop.IdentityService.Domain.Entities.csproj", "{1EFD56EC-0FDA-4179-8D88-2AA677915A8C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{E051FE75-FD8D-4035-AE6A-4AD99D42706F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{9F1EC9C6-B784-4719-BE06-940BC857B4DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.IdentityService.Application.Features.Identity", "src\IdentityService\MicroShop.IdentityService.Application.Features.Identity\MicroShop.IdentityService.Application.Features.Identity.csproj", "{8CDA283A-E0CD-4186-9A80-10C147089705}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.IdentityService.Application.Features.Identity", "src\IdentityService\MicroShop.IdentityService.Application.Features.Identity\MicroShop.IdentityService.Application.Features.Identity.csproj", "{8CDA283A-E0CD-4186-9A80-10C147089705}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.IdentityService.Application.Features.Authentication", "src\IdentityService\MicroShop.IdentityService.Application.Features.Authentication\MicroShop.IdentityService.Application.Features.Authentication.csproj", "{D793605C-2297-437F-973E-DD3CEA84175C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Errors", "Errors", "{531A5002-EB69-4BBF-AE84-1AD057EEA7E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.IdentityService.Application.Errors", "src\IdentityService\MicroShop.IdentityService.Application.Errors\MicroShop.IdentityService.Application.Errors.csproj", "{E5D6C1B8-67B0-484F-9655-09E01722A658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.IdentityService.Core.Containers", "src\IdentityService\MicroShop.IdentityService.Core.Containers\MicroShop.IdentityService.Core.Containers.csproj", "{C2D6FCD1-7916-406F-BD4D-15608DA56C06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F248CDCC-671C-45B5-8F17-842E6B556D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.IdentityService.Application.Services.Mapper", "src\IdentityService\MicroShop.IdentityService.Application.Services.Mapper\MicroShop.IdentityService.Application.Services.Mapper.csproj", "{5469DC60-AF3B-4C7B-8FFF-57D47512C11A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +153,22 @@ Global
 		{8CDA283A-E0CD-4186-9A80-10C147089705}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CDA283A-E0CD-4186-9A80-10C147089705}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CDA283A-E0CD-4186-9A80-10C147089705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D793605C-2297-437F-973E-DD3CEA84175C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D793605C-2297-437F-973E-DD3CEA84175C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D793605C-2297-437F-973E-DD3CEA84175C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D793605C-2297-437F-973E-DD3CEA84175C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5D6C1B8-67B0-484F-9655-09E01722A658}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5D6C1B8-67B0-484F-9655-09E01722A658}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5D6C1B8-67B0-484F-9655-09E01722A658}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5D6C1B8-67B0-484F-9655-09E01722A658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2D6FCD1-7916-406F-BD4D-15608DA56C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2D6FCD1-7916-406F-BD4D-15608DA56C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2D6FCD1-7916-406F-BD4D-15608DA56C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2D6FCD1-7916-406F-BD4D-15608DA56C06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5469DC60-AF3B-4C7B-8FFF-57D47512C11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5469DC60-AF3B-4C7B-8FFF-57D47512C11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5469DC60-AF3B-4C7B-8FFF-57D47512C11A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5469DC60-AF3B-4C7B-8FFF-57D47512C11A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -178,6 +206,12 @@ Global
 		{E051FE75-FD8D-4035-AE6A-4AD99D42706F} = {7D4DF8F2-AAE3-4095-9798-93E839F2184E}
 		{9F1EC9C6-B784-4719-BE06-940BC857B4DC} = {E051FE75-FD8D-4035-AE6A-4AD99D42706F}
 		{8CDA283A-E0CD-4186-9A80-10C147089705} = {9F1EC9C6-B784-4719-BE06-940BC857B4DC}
+		{D793605C-2297-437F-973E-DD3CEA84175C} = {9F1EC9C6-B784-4719-BE06-940BC857B4DC}
+		{531A5002-EB69-4BBF-AE84-1AD057EEA7E9} = {E051FE75-FD8D-4035-AE6A-4AD99D42706F}
+		{E5D6C1B8-67B0-484F-9655-09E01722A658} = {531A5002-EB69-4BBF-AE84-1AD057EEA7E9}
+		{C2D6FCD1-7916-406F-BD4D-15608DA56C06} = {B5F2F0BB-9085-4098-AF9E-3F1F378F586B}
+		{F248CDCC-671C-45B5-8F17-842E6B556D63} = {E051FE75-FD8D-4035-AE6A-4AD99D42706F}
+		{5469DC60-AF3B-4C7B-8FFF-57D47512C11A} = {F248CDCC-671C-45B5-8F17-842E6B556D63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0DE0740B-4B46-4C52-B442-7ECB58E06A51}

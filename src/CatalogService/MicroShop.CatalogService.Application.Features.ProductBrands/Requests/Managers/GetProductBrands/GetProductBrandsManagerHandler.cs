@@ -1,7 +1,10 @@
-﻿using MicroShop.Catalog.Application.Features.ProductBrands.Queries.GetProductBrands;
+﻿using System.Diagnostics;
+using MicroShop.Catalog.Application.Features.ProductBrands.Queries.GetProductBrands;
 using MicroShop.CatalogService.Domain.Entities.ProductBrands;
 using MicroShop.Core.Interfaces.Containers.Requests.Manager;
 using MicroShop.Core.Abstractions.Requests.Manager;
+using MicroShop.Core.Errors;
+using MicroShop.Core.Models.Exceptions;
 
 namespace MicroShop.CatalogService.Application.Features.ProductBrands.Requests.Managers.GetProductBrands
 {

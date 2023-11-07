@@ -1,4 +1,5 @@
-﻿using MicroShop.CatalogService.Application.Features.Products.Requests.Managers.GetProducts;
+﻿using MicroShop.CatalogService.API.Controllers;
+using MicroShop.CatalogService.Application.Features.Products.Requests.Managers.GetProducts;
 using MicroShop.Core.Interfaces.Containers.Controllers;
 using Microsoft.AspNetCore.Mvc;
 

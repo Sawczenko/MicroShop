@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -7,14 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.13" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="MediatR.Contracts" Version="2.0.1" />
+    <PackageReference Include="MicroShop.Core" Version="1.0.29" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MicroShop.IdentityService.Database\MicroShop.IdentityService.Database.csproj" />
+    <ProjectReference Include="..\MicroShop.IdentityService.Application.Errors\MicroShop.IdentityService.Application.Errors.csproj" />
     <ProjectReference Include="..\MicroShop.IdentityService.Domain.Entities\MicroShop.IdentityService.Domain.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Requests\Validators\UserExists\" />
   </ItemGroup>
 
 </Project>

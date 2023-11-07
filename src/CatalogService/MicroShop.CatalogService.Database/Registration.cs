@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Builder;
 
 public static class Registration
 {
-    public static void AddCatalogDatabase(this IServiceCollection services, IConfiguration configuration)
+    public static void AddDatabase(this IServiceCollection services, IConfiguration configuration)
     {
        services.AddDbContext<CatalogDbContext>(options =>
         {
