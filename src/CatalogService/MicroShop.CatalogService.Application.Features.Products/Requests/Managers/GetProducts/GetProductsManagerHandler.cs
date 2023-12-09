@@ -2,6 +2,7 @@
 using MicroShop.CatalogService.Application.DataTransferObjects;
 using MicroShop.Core.Interfaces.Containers.Requests.Manager;
 using MicroShop.Core.Abstractions.Requests.Manager;
+using MicroShop.Core.Models.Requests;
 using MicroShop.Core.Models;
 
 namespace MicroShop.CatalogService.Application.Features.Products.Requests.Managers.GetProducts
@@ -11,11 +12,13 @@ namespace MicroShop.CatalogService.Application.Features.Products.Requests.Manage
         public GetProductsManagerHandler(IManagerContainer managerServicesContainer)
             : base(managerServicesContainer) { }
 
-        public override async Task<PagedList<ProductDto>> Handle(GetProductsManager request, CancellationToken cancellationToken)
+        public override async Task<RequestResult<PagedList<ProductDto>>> Handle(GetProductsManager request, CancellationToken cancellationToken)
         {
             var products = await Send(new GetProductsQuery(), cancellationToken);
 
-            return await Map<PagedList<ProductDto>>(products);
+            var productListDto = await Map<PagedList<ProductDto>>(products);
+
+            return RequestResult<PagedList<ProductDto>>.Success(productListDto); 
         }
     }
 }

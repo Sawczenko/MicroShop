@@ -4,4 +4,4 @@ using MicroShop.Core.Models;
 
 namespace MicroShop.Catalog.Application.Features.Queries.Products.GetProducts;
 
-public sealed record GetProductsQuery : IQuery<PagedList<Product>> { }
+internal sealed record GetProductsQuery : IQuery<PagedList<Product>> { }

@@ -1,10 +1,8 @@
-﻿using System.Diagnostics;
-using MicroShop.Catalog.Application.Features.ProductBrands.Queries.GetProductBrands;
+﻿using MicroShop.Catalog.Application.Features.ProductBrands.Queries.GetProductBrands;
 using MicroShop.CatalogService.Domain.Entities.ProductBrands;
 using MicroShop.Core.Interfaces.Containers.Requests.Manager;
 using MicroShop.Core.Abstractions.Requests.Manager;
-using MicroShop.Core.Errors;
-using MicroShop.Core.Models.Exceptions;
+using MicroShop.Core.Models.Requests;
 
 namespace MicroShop.CatalogService.Application.Features.ProductBrands.Requests.Managers.GetProductBrands
 {
@@ -13,11 +11,11 @@ namespace MicroShop.CatalogService.Application.Features.ProductBrands.Requests.M
         public GetProductBrandsManagerHandler(IManagerContainer container) 
             : base(container) { }
 
-        public override async Task<IEnumerable<ProductBrand>> Handle(GetProductBrandsManager request, CancellationToken cancellationToken)
+        public override async Task<RequestResult<IEnumerable<ProductBrand>>> Handle(GetProductBrandsManager request, CancellationToken cancellationToken)
         {
             var productBrands = await Send(new GetProductBrandsQuery(), cancellationToken);
 
-            return productBrands;
+            return RequestResult<IEnumerable<ProductBrand>>.Success(productBrands);
         }
     }
 }

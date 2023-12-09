@@ -10,21 +10,58 @@ namespace MicroShop.IdentityService.Application.Errors.Authentication
 
         public static readonly Error MICROSHOP_USER_DOES_NOT_EXIST = new ErrorMicroShopUserDoesNotExist();
 
+        public static readonly Error MICROSHOP_USER_PASSWORD_IS_NOT_CORRECT = new ErrorMicroShopUserPasswordIsNotCorrect();
+
+        public static readonly Error MICROSHOP_USER_ALREADY_EXISTS = new ErrorMicroShopUserAlreadyExists();
+
+        public static readonly Error MICROSHOP_USER_CREATION_FAILED = new ErrorMicroShopUserCreationFailed();
+
         #endregion 
 
-        public override string Message { get; }
+        public string Message { get; protected set; }
         public override HttpStatusCode HttpStatusCode { get; }
 
         public AuthenticationErrors(string name, int value) : base(name, value) { }
 
         private sealed class ErrorMicroShopUserDoesNotExist : Error
         {
-            public override string Message => "User {0} doesn't exist.";
             public override HttpStatusCode HttpStatusCode => HttpStatusCode.Unauthorized;
 
             public ErrorMicroShopUserDoesNotExist() : base(nameof(MICROSHOP_USER_DOES_NOT_EXIST), 2000)
             {
+                Message = "User {0} doesn't exist.";
             }
+        }
+
+
+        private sealed class ErrorMicroShopUserPasswordIsNotCorrect : Error
+        {
+            public override HttpStatusCode HttpStatusCode => HttpStatusCode.Unauthorized;
+
+            public ErrorMicroShopUserPasswordIsNotCorrect() : base(nameof(MICROSHOP_USER_PASSWORD_IS_NOT_CORRECT), 2001)
+            {
+                Message = "Password for user {0} is not correct.";
+            }
+        }
+
+        private sealed class ErrorMicroShopUserAlreadyExists : Error
+        {
+            public override HttpStatusCode HttpStatusCode => HttpStatusCode.BadRequest;
+
+            public ErrorMicroShopUserAlreadyExists() : base(nameof(MICROSHOP_USER_ALREADY_EXISTS), 2002)
+            {
+                Message = "User {0} already exists.";
+            }
+        }
+
+        private sealed class ErrorMicroShopUserCreationFailed : Error
+        {
+            public ErrorMicroShopUserCreationFailed() : base(nameof(MICROSHOP_USER_CREATION_FAILED), 2003)
+            {
+                Message = "MicroShop user creation failed!";
+            }
+
+            public override HttpStatusCode HttpStatusCode => HttpStatusCode.InternalServerError;
         }
     }
 }

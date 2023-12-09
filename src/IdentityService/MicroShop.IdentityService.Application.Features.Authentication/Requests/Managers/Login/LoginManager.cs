@@ -5,11 +5,11 @@ namespace MicroShop.IdentityService.Application.Features.Authentication.Requests
 {
     public sealed record LoginManager : IManager<LoginResponse>
     {
-        public LoginManagerRequest LoginManagerRequest;
+        public LoginManagerRequest Request { get; }
 
-        public LoginManager(LoginManagerRequest loginManagerRequest)
+        public LoginManager(LoginManagerRequest request)
         {
-            LoginManagerRequest = loginManagerRequest;
+            Request = request;
         }
     }
 }
