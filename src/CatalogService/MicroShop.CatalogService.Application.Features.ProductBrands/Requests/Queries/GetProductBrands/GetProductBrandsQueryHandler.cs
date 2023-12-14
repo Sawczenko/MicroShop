@@ -4,7 +4,7 @@ using MicroShop.CatalogService.Domain.Entities.ProductBrands;
 using MicroShop.Core.Interfaces.Containers.Requests.Query;
 using Microsoft.EntityFrameworkCore;
 
-namespace MicroShop.Catalog.Application.Features.ProductBrands.Queries.GetProductBrands
+namespace MicroShop.CatalogService.Application.Features.ProductBrands.Requests.Queries.GetProductBrands
 {
     internal sealed class GetProductBrandsQueryHandler : QueryHandlerBase<GetProductBrandsQuery, ICollection<ProductBrand>>
     {

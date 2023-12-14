@@ -1,11 +1,10 @@
-﻿using MicroShop.CatalogService.Application.Features.ProductTypes.Requests.Queries.GetProductTypes;
-using MicroShop.CatalogService.Core.Abstractions.Requests.Requests.Query;
+﻿using MicroShop.CatalogService.Core.Abstractions.Requests.Requests.Query;
 using MicroShop.CatalogService.Core.Interfaces.Database;
 using MicroShop.CatalogService.Domain.Entities.ProductTypes;
 using MicroShop.Core.Interfaces.Containers.Requests.Query;
 using Microsoft.EntityFrameworkCore;
 
-namespace MicroShop.Catalog.Application.Features.Queries.ProductTypes.GetProductTypes
+namespace MicroShop.CatalogService.Application.Features.ProductTypes.Requests.Queries.GetProductTypes
 {
     internal sealed class GetProductTypesQueryHandler : QueryHandlerBase<GetProductTypesQuery, ICollection<ProductType>>
     {

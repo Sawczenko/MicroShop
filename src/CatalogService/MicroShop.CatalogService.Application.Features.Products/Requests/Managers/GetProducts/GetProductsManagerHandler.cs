@@ -1,5 +1,6 @@
-﻿using MicroShop.Catalog.Application.Features.Queries.Products.GetProducts;
-using MicroShop.CatalogService.Application.DataTransferObjects;
+﻿using MicroShop.CatalogService.Application.DataTransferObjects;
+using MicroShop.CatalogService.Application.Features.Products.Dtos;
+using MicroShop.CatalogService.Application.Features.Products.Requests.Queries.GetProducts;
 using MicroShop.Core.Interfaces.Containers.Requests.Manager;
 using MicroShop.Core.Abstractions.Requests.Manager;
 using MicroShop.Core.Models.Requests;

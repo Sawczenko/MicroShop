@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MicroShop.CatalogService.Application.DataTransferObjects\MicroShop.CatalogService.Application.DataTransferObjects.csproj" />
     <ProjectReference Include="..\MicroShop.CatalogService.Core.Abstractions.Requests\MicroShop.CatalogService.Core.Abstractions.Requests.csproj" />
     <ProjectReference Include="..\MicroShop.CatalogService.Domain.Entities\MicroShop.CatalogService.Domain.Entities.csproj" />
   </ItemGroup>
