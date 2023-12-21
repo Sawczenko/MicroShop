@@ -1,4 +1,5 @@
-﻿using MicroShop.IdentityService.Domain.Entities.Users;
+﻿using System.Drawing;
+using MicroShop.IdentityService.Domain.Entities.Users;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using MicroShop.IdentityService.Database.Contexts;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,14 +15,14 @@ namespace MicroShop.IdentityService.Application.Features.Identity
     {
         public static void AddIdentity(this IServiceCollection services, IConfiguration configuration)
         {
-            AddDatabase(services);
+            AddDatabase(services, configuration);
             AddIdentity(services);
             AddAuthentication(services, configuration);
         }
 
-        private static void AddDatabase(IServiceCollection services)
+        private static void AddDatabase(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDatabase();
+            services.AddDatabase(configuration);
         }
 
         private static void AddIdentity(IServiceCollection services)

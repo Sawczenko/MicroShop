@@ -13,6 +13,12 @@ internal sealed class UserExistsValidatorHandler : ValidatorHandlerBase<UserExis
             return Task.FromResult(RequestResult.Failure(AuthenticationErrors.MICROSHOP_USER_DOES_NOT_EXIST, validator.UserName));
         }
 
+        if (validator.MicroShopUser.UserName != validator.UserName)
+        {
+            return Task.FromResult(RequestResult.Failure(AuthenticationErrors.MICROSHOP_USER_USERNAME_DOES_NOT_MATCH,
+                validator.UserName));
+        }
+
         return Task.FromResult(RequestResult.Success());
     }
 }

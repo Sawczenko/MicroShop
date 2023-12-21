@@ -1,8 +1,7 @@
-﻿using MicroShop.Core.Abstractions.Requests.Validators;
-using MicroShop.Core.Models.Exceptions;
-using MicroShop.Core.Models.Requests;
-using MicroShop.IdentityService.Application.Errors.Authentication;
+﻿using MicroShop.IdentityService.Application.Errors.Authentication;
+using MicroShop.Core.Abstractions.Requests.Validators;
 using MicroShop.IdentityService.Domain.Entities.Users;
+using MicroShop.Core.Models.Requests;
 using Microsoft.AspNetCore.Identity;
 
 namespace MicroShop.IdentityService.Application.Features.Authentication.Requests.Validators.UserPassword;

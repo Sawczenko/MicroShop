@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="NSubstitute" Version="5.1.0" />
+    <PackageReference Include="xunit" Version="2.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MicroShop.IdentityService.Application.Features.Authentication\MicroShop.IdentityService.Application.Features.Authentication.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Requests\Commands\" />
+  </ItemGroup>
+
 </Project>

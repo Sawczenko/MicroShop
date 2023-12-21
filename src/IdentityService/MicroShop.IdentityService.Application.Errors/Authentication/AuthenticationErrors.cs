@@ -16,6 +16,9 @@ namespace MicroShop.IdentityService.Application.Errors.Authentication
 
         public static readonly Error MICROSHOP_USER_CREATION_FAILED = new ErrorMicroShopUserCreationFailed();
 
+        public static readonly Error MICROSHOP_USER_USERNAME_DOES_NOT_MATCH =
+            new ErrorMicroShopUserUserNameDoesNotMatch();
+
         #endregion 
 
         public string Message { get; protected set; }
@@ -59,6 +62,16 @@ namespace MicroShop.IdentityService.Application.Errors.Authentication
             public ErrorMicroShopUserCreationFailed() : base(nameof(MICROSHOP_USER_CREATION_FAILED), 2003)
             {
                 Message = "MicroShop user creation failed!";
+            }
+
+            public override HttpStatusCode HttpStatusCode => HttpStatusCode.InternalServerError;
+        }
+
+        private sealed class ErrorMicroShopUserUserNameDoesNotMatch : Error
+        {
+            public ErrorMicroShopUserUserNameDoesNotMatch() : base(nameof(MICROSHOP_USER_USERNAME_DOES_NOT_MATCH), 2004)
+            {
+                Message = "MicroShop user userName does not match!";
             }
 
             public override HttpStatusCode HttpStatusCode => HttpStatusCode.InternalServerError;

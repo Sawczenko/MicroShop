@@ -89,7 +89,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{6543D78A-FE19-4BBA-8440-1B23B0BB0D84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.IdentityService.Tests.Unit.Application.Features.Authentication", "src\IdentityService\MicroShop.IdentityService.Tests.Unit.Application.Features.Authentication\MicroShop.IdentityService.Tests.Unit.Application.Features.Authentication.csproj", "{219B61CE-4C1E-4F35-A2F6-1E00CF4ED448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.IdentityService.Tests.Unit.Application.Features.Authentication", "src\IdentityService\MicroShop.IdentityService.Tests.Unit.Application.Features.Authentication\MicroShop.IdentityService.Tests.Unit.Application.Features.Authentication.csproj", "{219B61CE-4C1E-4F35-A2F6-1E00CF4ED448}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.CatalogService.Application.DataTransferObjects", "src\CatalogService\MicroShop.CatalogService.Application.DataTransferObjects\MicroShop.CatalogService.Application.DataTransferObjects.csproj", "{8A747F5A-4180-4FFF-BB4B-550C264FF08E}"
 EndProject
