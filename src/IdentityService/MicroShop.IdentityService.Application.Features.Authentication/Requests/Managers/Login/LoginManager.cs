@@ -1,5 +1,5 @@
-﻿using MicroShop.Core.Interfaces.Requests.Manager;
-using MicroShop.IdentityService.Application.Features.Authentication.Dtos;
+﻿using MicroShop.IdentityService.Application.Features.Authentication.Dtos;
+using MicroShop.Core.Interfaces.Requests.Manager;
 
 namespace MicroShop.IdentityService.Application.Features.Authentication.Requests.Managers.Login
 {

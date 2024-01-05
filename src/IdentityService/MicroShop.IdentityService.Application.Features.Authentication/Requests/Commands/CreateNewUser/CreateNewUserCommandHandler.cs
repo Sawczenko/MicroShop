@@ -1,7 +1,7 @@
-﻿using MicroShop.Core.Abstractions.Requests.Command;
-using MicroShop.Core.Models.Requests;
-using MicroShop.IdentityService.Application.Errors.Authentication;
+﻿using MicroShop.IdentityService.Application.Errors.Authentication;
 using MicroShop.IdentityService.Domain.Entities.Users;
+using MicroShop.Core.Abstractions.Requests.Command;
+using MicroShop.Core.Models.Requests;
 using Microsoft.AspNetCore.Identity;
 
 namespace MicroShop.IdentityService.Application.Features.Authentication.Requests.Commands.CreateNewUser;
@@ -23,7 +23,6 @@ internal sealed class CreateNewUserCommandHandler : CommandHandlerBase<CreateNew
             SecurityStamp = Guid.NewGuid().ToString(),
             UserName = command.UserName
         };
-
 
         var result = await _userManager.CreateAsync(user, command.Password);
 

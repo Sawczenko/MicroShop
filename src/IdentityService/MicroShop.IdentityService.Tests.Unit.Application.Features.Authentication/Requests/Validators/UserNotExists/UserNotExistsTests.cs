@@ -1,9 +1,9 @@
-﻿using FluentAssertions;
-using MicroShop.Core.Errors;
-using MicroShop.IdentityService.Application.Errors.Authentication;
+﻿using MicroShop.IdentityService.Application.Features.Authentication.Requests.Validators.UserNotExists;
 using MicroShop.IdentityService.Application.Features.Authentication.Requests.Validators.UserExists;
-using MicroShop.IdentityService.Application.Features.Authentication.Requests.Validators.UserNotExists;
+using MicroShop.IdentityService.Application.Errors.Authentication;
 using MicroShop.IdentityService.Domain.Entities.Users;
+using MicroShop.Core.Errors;
+using FluentAssertions;
 using Xunit;
 
 namespace MicroShop.IdentityService.Tests.Unit.Application.Features.Authentication.Requests.Validators.UserNotExists
@@ -11,7 +11,7 @@ namespace MicroShop.IdentityService.Tests.Unit.Application.Features.Authenticati
     public class UserNotExistsTests
     {
         [Fact]
-        public async Task UserNotExistsValidator_WhenTestUserExists_Return_UserTestAlreadyExists()
+        public async Task UserNotExistsValidator_WhenTestUserExists_ReturnUserTestAlreadyExists()
         {
             //Arrange
 
@@ -36,7 +36,7 @@ namespace MicroShop.IdentityService.Tests.Unit.Application.Features.Authenticati
         }
 
         [Fact]
-        public async Task UserExistsValidator_WhenTestUserExists_Return_SuccessResult()
+        public async Task UserExistsValidator_WhenTestUserExists_ReturnSuccessResult()
         {
             //Arrange
 
@@ -59,7 +59,7 @@ namespace MicroShop.IdentityService.Tests.Unit.Application.Features.Authenticati
         }
 
         [Fact]
-        public async Task UserExistsValidator_WhenTestUserExistsButUserNameDoesNotMatch_Return_UserUserNameDoesNotMatch()
+        public async Task UserExistsValidator_WhenTestUserExistsButUserNameDoesNotMatch_ReturnUserUserNameDoesNotMatch()
         {
             //Arrange
 
