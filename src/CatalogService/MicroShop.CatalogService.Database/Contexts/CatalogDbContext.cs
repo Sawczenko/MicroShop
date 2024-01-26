@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MicroShop.CatalogService.Database.Contexts
 {
-    internal class CatalogDbContext : DbContext, ICatalogDbContext
+    public class CatalogDbContext : DbContext, ICatalogDbContext
     {
 
         public virtual DbSet<Product> Products { get; set; }

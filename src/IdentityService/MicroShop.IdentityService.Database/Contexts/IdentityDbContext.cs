@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace MicroShop.IdentityService.Database.Contexts
 {
-    public class IdentityDbContext : IdentityDbContext<MicroShopUser, IdentityRole<int>, int>, IIdentityDbContext
+    internal class IdentityDbContext : IdentityDbContext<MicroShopUser, IdentityRole<int>, int>, IIdentityDbContext
     {
         public IdentityDbContext(DbContextOptions<IdentityDbContext> options) : base(options)
         {

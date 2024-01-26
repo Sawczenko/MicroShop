@@ -4,8 +4,8 @@ using MicroShop.CatalogService.Application.Features.Products;
 using MicroShop.CatalogService.Core.Containers;
 using MicroShop.Catalog.Application.Services;
 using MicroShop.Core.Features.Telemetry;
-using Elastic.Apm.NetCoreAll;
 using MicroShop.Core;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +20,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
 
+
+builder.Services
+    .UseMicroShopCore(AppDomain.CurrentDomain.GetAssemblies())
+    .WithTelemetry(configuration => {
+        configuration.ServiceVersion = "1.0";
+        configuration.ServiceName = "CatalogService";
+        configuration.OtlpEndpoint = "http://localhost:4317";
+    });
+
 builder.Services.AddDatabase(builder.Configuration);
 builder.Services.AddMapper();
 builder.Services.AddContainers();
@@ -27,10 +36,8 @@ builder.Services.AddProducts();
 builder.Services.AddProductTypes();
 builder.Services.AddProductBrands();
 
-builder.Services.UseMicroShopCore(AppDomain.CurrentDomain.GetAssemblies());
-
 var app = builder.Build();
-app.UseAllElasticApm(builder.Configuration);
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -52,3 +59,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+public partial class Program {}

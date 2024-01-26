@@ -7,15 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="6.12.0" />
-    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
-    <PackageReference Include="NSubstitute" Version="5.1.0" />
     <PackageReference Include="xunit" Version="2.6.6" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MicroShop.IdentityService.Application.Features.Authentication\MicroShop.IdentityService.Application.Features.Authentication.csproj" />
+    <ProjectReference Include="..\MicroShop.CatalogService.Core.Interfaces.Database\MicroShop.CatalogService.Core.Interfaces.Database.csproj" />
+    <ProjectReference Include="..\MicroShop.CatalogService.Domain.Entities\MicroShop.CatalogService.Domain.Entities.csproj" />
   </ItemGroup>
 
 </Project>

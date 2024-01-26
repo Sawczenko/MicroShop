@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.1" />
+    <PackageReference Include="Testcontainers.MsSql" Version="3.7.0" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.6.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MicroShop.CatalogService.API\MicroShop.CatalogService.API.csproj" />
+    <ProjectReference Include="..\MicroShop.CatalogService.Database\MicroShop.CatalogService.Database.csproj" />
+  </ItemGroup>
+
+</Project>

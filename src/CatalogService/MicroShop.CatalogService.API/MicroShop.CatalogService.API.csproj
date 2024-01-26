@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>7f910ba1-d0e2-4f15-a7a8-ac7c6c4360cd</UserSecretsId>
@@ -10,8 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Elastic.Apm.NetCoreAll" Version="1.25.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
   </ItemGroup>
