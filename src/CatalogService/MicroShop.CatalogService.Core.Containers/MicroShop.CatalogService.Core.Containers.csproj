@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.2.0" />
-    <PackageReference Include="MicroShop.Core" Version="1.0.32" />
+    <PackageReference Include="MicroShop.Core" Version="1.0.33" />
   </ItemGroup>
 
   <ItemGroup>

@@ -13,7 +13,7 @@ namespace MicroShop.Catalog.Application.Services.Mapper
         }
         public T Map<T>(object sourceObject)
         {
-            return mapper.Map<T>(sourceObject);
+            return mapper.Map<T>(sourceObject); ;
         }
     }
 }

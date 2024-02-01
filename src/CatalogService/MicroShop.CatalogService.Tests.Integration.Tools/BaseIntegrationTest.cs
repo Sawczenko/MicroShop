@@ -1,4 +1,6 @@
 ﻿using MediatR;
+using MicroShop.CatalogService.Core.Interfaces.Database;
+using MicroShop.CatalogService.Database.Contexts;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
@@ -9,12 +11,16 @@ namespace MicroShop.CatalogService.Tests.Integration.Tools
         private readonly IServiceScope _scope;
         protected readonly ISender Sender;
 
-        protected BaseIntegrationTest(IntegrationTestWebAppFactory factory)
+        public BaseIntegrationTest(IntegrationTestWebAppFactory factory)
         {
             _scope = factory.Services.CreateScope();
 
             Sender = _scope.ServiceProvider.GetRequiredService<ISender>();
         }
 
+        protected CatalogDbContext GetCatalogDbContext()
+        {
+            return _scope.ServiceProvider.GetRequiredService<CatalogDbContext>();
+        }
     }
 }

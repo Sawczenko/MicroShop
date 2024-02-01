@@ -12,7 +12,7 @@ namespace MicroShop.CatalogService.Database.Seeds
                 {
                     Id = 1,
                     ProductBrandId = 1,
-                    ProductName = "Baldur's Gate",
+                    Name = "Baldur's Gate",
                     Price = 100,
                     ProductTypeId = 1,
                     PictureUrl = "TestUrl",
@@ -26,7 +26,7 @@ namespace MicroShop.CatalogService.Database.Seeds
                     Description = "Dobra pralka",
                     PictureUrl = "TestUrl",
                     Price = 1000,
-                    ProductName = "Amica XYZ"
+                    Name = "Amica XYZ"
                 }
             };
         }

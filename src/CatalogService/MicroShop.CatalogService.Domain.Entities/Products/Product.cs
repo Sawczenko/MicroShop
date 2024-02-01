@@ -10,7 +10,7 @@ namespace MicroShop.CatalogService.Domain.Entities.Products
     public class Product : BaseEntity
     {
         [Required]
-        public string ProductName { get; set; }
+        public string Name { get; set; }
 
         [Required]
         public float Price { get; set; }

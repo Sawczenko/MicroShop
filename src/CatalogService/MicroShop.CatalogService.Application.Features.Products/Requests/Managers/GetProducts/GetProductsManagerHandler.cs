@@ -16,6 +16,12 @@ namespace MicroShop.CatalogService.Application.Features.Products.Requests.Manage
         {
             var products = await Send(new GetProductsQuery(), cancellationToken);
 
+            var productDto = await Map<ProductDto>(products.Items.First());
+
+            var test = new PagedList<int>();
+            test.Add(1);
+            test.Add(2);
+            var test2 = await Map<PagedList<int>>(test);
             var productListDto = await Map<PagedList<ProductDto>>(products);
 
             return RequestResult<PagedList<ProductDto>>.Success(productListDto); 
