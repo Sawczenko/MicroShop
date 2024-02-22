@@ -1,26 +1,38 @@
-﻿using MediatR;
-using MicroShop.CatalogService.Core.Interfaces.Database;
+﻿using Microsoft.Extensions.DependencyInjection;
+using MediatR;
 using MicroShop.CatalogService.Database.Contexts;
-using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace MicroShop.CatalogService.Tests.Integration.Tools
+namespace MicroShop.CatalogService.Tests.Integration.Tools;
+
+public abstract class BaseIntegrationTest : IClassFixture<IntegrationTestWebAppFactory>, IAsyncLifetime
 {
-    public class BaseIntegrationTest : IClassFixture<IntegrationTestWebAppFactory>
+    private readonly Func<Task> _resetDatabaseTask;
+    private readonly IServiceScope _scope;
+    protected readonly ISender Sender;
+    protected readonly CatalogDbContext DbContext;
+
+    protected BaseIntegrationTest(IntegrationTestWebAppFactory factory)
     {
-        private readonly IServiceScope _scope;
-        protected readonly ISender Sender;
+        _scope = factory.Services.CreateScope();
 
-        public BaseIntegrationTest(IntegrationTestWebAppFactory factory)
-        {
-            _scope = factory.Services.CreateScope();
+        Sender = _scope.ServiceProvider.GetRequiredService<ISender>();
+        DbContext = _scope.ServiceProvider.GetRequiredService<CatalogDbContext>();
 
-            Sender = _scope.ServiceProvider.GetRequiredService<ISender>();
-        }
+        _resetDatabaseTask = factory.ResetDatabaseAsync;
+    }
 
-        protected CatalogDbContext GetCatalogDbContext()
-        {
-            return _scope.ServiceProvider.GetRequiredService<CatalogDbContext>();
-        }
+    protected CatalogDbContext GetCatalogDbContext()
+    {
+        return DbContext;
+    }
+
+    public Task InitializeAsync() => Task.CompletedTask;
+
+    public async Task DisposeAsync()
+    {
+        await _resetDatabaseTask();
+        _scope?.Dispose();
+        DbContext?.Dispose();
     }
 }

@@ -22,9 +22,9 @@ namespace MicroShop.IdentityService.Application.Features.Authentication.Requests
         {
             var user = await Send(new GetUserByNameQuery(manager.Request.UserName), cancellationToken);
 
-            await Validate(new UserExistsValidator(user, manager.Request.UserName), cancellationToken);
+            var userExistsResult = await Validate(new UserExistsValidator(user, manager.Request.UserName), cancellationToken);
 
-            await Validate(new UserPasswordValidator(user, manager.Request), cancellationToken);
+            var userPasswordValidationResult = await Validate(new UserPasswordValidator(user, manager.Request), cancellationToken);
 
             var userRoles = await Send(new GetUserRolesQuery(user), cancellationToken);
 

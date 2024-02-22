@@ -15,5 +15,10 @@ namespace MicroShop.IdentityService.Application.Services.Mapper.Mapper
         {
             return mapper.Map<T>(sourceObject);
         }
+
+        public TDestination Map<TSource, TDestination>(TSource sourceObject)
+        {
+            return mapper.Map<TSource, TDestination>(sourceObject);
+        }
     }
 }

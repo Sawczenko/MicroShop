@@ -13,7 +13,7 @@ public static class Registration
        services.AddDbContext<CatalogDbContext>(options =>
         {
             #if DEBUG
-                options.UseInMemoryDatabase("CatalogServiceDatabase");
+               options.UseInMemoryDatabase("CatalogServiceDatabase");
 #else
                 options.UseSqlServer(configuration.GetConnectionString("CatalogService"));
 #endif          
@@ -26,6 +26,7 @@ public static class Registration
     {
         using (var scope = applicationBuilder.ApplicationServices.CreateScope())
         {
+            
             var context = scope.ServiceProvider.GetRequiredService<ICatalogDbContext>();
 
             context.Database.EnsureCreated();

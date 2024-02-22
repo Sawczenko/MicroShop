@@ -101,11 +101,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{34E8D1D4-E605-4564-ADF9-D1CAD7FD1B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.CatalogService.Tests.Integration.Application.Features.Products", "src\CatalogService\MicroShop.CatalogService.Tests.Integration.Application.Features.Products\MicroShop.CatalogService.Tests.Integration.Application.Features.Products.csproj", "{D6A42810-CB86-4F0C-A388-9532FB3CEA89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.CatalogService.Tests.Integration.Application.Features.Products", "src\CatalogService\MicroShop.CatalogService.Tests.Integration.Application.Features.Products\MicroShop.CatalogService.Tests.Integration.Application.Features.Products.csproj", "{D6A42810-CB86-4F0C-A388-9532FB3CEA89}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{BF5D3978-7516-464B-8695-73E52F6DE8DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.CatalogService.Tests.Integration.Tools", "src\CatalogService\MicroShop.CatalogService.Tests.Integration.Tools\MicroShop.CatalogService.Tests.Integration.Tools.csproj", "{DF1B2213-DBD6-486D-AC5B-D629F9E7422F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroShop.CatalogService.Tests.Integration.Tools", "src\CatalogService\MicroShop.CatalogService.Tests.Integration.Tools\MicroShop.CatalogService.Tests.Integration.Tools.csproj", "{7559DBD1-F183-4022-BB50-5D85B03097F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,10 +201,10 @@ Global
 		{D6A42810-CB86-4F0C-A388-9532FB3CEA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6A42810-CB86-4F0C-A388-9532FB3CEA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6A42810-CB86-4F0C-A388-9532FB3CEA89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DF1B2213-DBD6-486D-AC5B-D629F9E7422F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF1B2213-DBD6-486D-AC5B-D629F9E7422F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF1B2213-DBD6-486D-AC5B-D629F9E7422F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF1B2213-DBD6-486D-AC5B-D629F9E7422F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7559DBD1-F183-4022-BB50-5D85B03097F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7559DBD1-F183-4022-BB50-5D85B03097F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7559DBD1-F183-4022-BB50-5D85B03097F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7559DBD1-F183-4022-BB50-5D85B03097F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -259,7 +259,7 @@ Global
 		{34E8D1D4-E605-4564-ADF9-D1CAD7FD1B96} = {308EBAA7-4A51-486B-9916-F35693DEBCA5}
 		{D6A42810-CB86-4F0C-A388-9532FB3CEA89} = {34E8D1D4-E605-4564-ADF9-D1CAD7FD1B96}
 		{BF5D3978-7516-464B-8695-73E52F6DE8DD} = {30D926EE-0D43-4046-9626-84DE15F4BEF0}
-		{DF1B2213-DBD6-486D-AC5B-D629F9E7422F} = {BF5D3978-7516-464B-8695-73E52F6DE8DD}
+		{7559DBD1-F183-4022-BB50-5D85B03097F4} = {BF5D3978-7516-464B-8695-73E52F6DE8DD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0DE0740B-4B46-4C52-B442-7ECB58E06A51}

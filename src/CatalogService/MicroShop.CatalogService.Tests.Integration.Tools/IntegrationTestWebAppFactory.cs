@@ -1,50 +1,75 @@
-﻿using MicroShop.CatalogService.Database.Contexts;
+using MicroShop.CatalogService.Database.Contexts;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.TestHost;
 using Microsoft.AspNetCore.Hosting;
 using Testcontainers.MsSql;
 using Xunit;
+using System.Data.Common;
+using Respawn;
+using MicroShop.Core.Interfaces.Database;
+using Microsoft.Data.SqlClient;
 
-namespace MicroShop.CatalogService.Tests.Integration.Tools
+namespace MicroShop.CatalogService.Tests.Integration.Tools;
+
+public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsyncLifetime
 {
-    public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsyncLifetime
+    private readonly MsSqlContainer _dbContainer = new MsSqlBuilder()
+        .WithImage("mcr.microsoft.com/mssql/server:2019-latest")
+        .WithPassword("Strong_password_123!")
+        .Build();
+
+    private DbConnection _dbConnection = default!;
+    private Respawner _respawner = default!;
+
+    protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        private readonly MsSqlContainer _dbContainer = new MsSqlBuilder()
-            .WithImage("mcr.microsoft.com/mssql/server:2019-latest")
-            .WithHostname("sqlserver")
-            .WithPassword("zaq1@WSX!")
-            .Build();
-
-        protected override void ConfigureWebHost(IWebHostBuilder builder)
+        builder.ConfigureTestServices(services =>
         {
-            builder.ConfigureTestServices(services =>
+            var descriptor = services
+                .SingleOrDefault(s => s.ServiceType == typeof(DbContextOptions<CatalogDbContext>));
+
+            if (descriptor is not null)
             {
-                var dbContextDescriptor = services.SingleOrDefault(s => s.ServiceType == typeof(CatalogDbContext));
+                services.Remove(descriptor);
+            }
 
+            services.AddDbContext<CatalogDbContext>(options =>
+                options.UseSqlServer(_dbContainer.GetConnectionString()));
+        });
+    }
 
-                if (dbContextDescriptor is not null)
-                {
-                    services.Remove(dbContextDescriptor);
-                }
+    public async Task InitializeAsync()
+    {  
+        await _dbContainer.StartAsync();
+        _dbConnection = new SqlConnection(_dbContainer.GetConnectionString());
 
-                services.AddDbContext<CatalogDbContext>(options =>
-                {
-                    options.UseSqlServer(_dbContainer.GetConnectionString());
-                });
+        await InitializeRespawner();
+    }
 
-            });
-        }
-
-        public Task InitializeAsync()
+    private async Task InitializeRespawner()
+    {
+        await _dbConnection.OpenAsync();
+        _respawner = await Respawner.CreateAsync(_dbConnection, new RespawnerOptions
         {
-            return _dbContainer.StartAsync();
-        }
+            SchemasToInclude = new[]
+            {
+                "dbo"
+            },
+            DbAdapter = DbAdapter.SqlServer,
+            CommandTimeout = 60
+        });
+    }
 
-        public new Task DisposeAsync()
-        {
-            return _dbContainer.StopAsync();
-        }
+    public Task ResetDatabaseAsync()
+    {
+        return _respawner.ResetAsync(_dbConnection);
+    }
+
+
+    public new Task DisposeAsync()
+    {
+        return _dbContainer.StopAsync();
     }
 }

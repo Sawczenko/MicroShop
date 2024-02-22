@@ -5,7 +5,6 @@ using MicroShop.CatalogService.Core.Containers;
 using MicroShop.Catalog.Application.Services;
 using MicroShop.Core.Features.Telemetry;
 using MicroShop.Core;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +22,8 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services
     .UseMicroShopCore(AppDomain.CurrentDomain.GetAssemblies())
-    .WithTelemetry(configuration => {
+    .WithTelemetry(configuration =>
+    {
         configuration.ServiceVersion = "1.0";
         configuration.ServiceName = "CatalogService";
         configuration.OtlpEndpoint = "http://localhost:4317";
@@ -61,4 +61,4 @@ app.MapControllers();
 app.Run();
 
 
-public partial class Program {}
+public partial class Program { }

@@ -10,6 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
@@ -23,5 +27,9 @@
     <ProjectReference Include="..\MicroShop.CatalogService.Core.Containers\MicroShop.CatalogService.Core.Containers.csproj" />
     <ProjectReference Include="..\MicroShop.CatalogService.Database\MicroShop.CatalogService.Database.csproj" />
   </ItemGroup>
+<ItemGroup>
+	<InternalsVisibleTo Include="MicroShop.CatalogService.Tests.Integration.Tools" />
+	<InternalsVisibleTo Include="MicroShop.CatalogService.Tests.Integration.Application.Features.Products" />
+</ItemGroup>
 
 </Project>

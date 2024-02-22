@@ -11,9 +11,15 @@ namespace MicroShop.Catalog.Application.Services.Mapper
         {
             this.mapper = mapper;
         }
+
         public T Map<T>(object sourceObject)
         {
-            return mapper.Map<T>(sourceObject); ;
+            return mapper.Map<T>(sourceObject);
+        }
+
+        public TDestination Map<TSource, TDestination>(TSource sourceObject)
+        {
+            return mapper.Map<TSource, TDestination>(sourceObject);
         }
     }
 }

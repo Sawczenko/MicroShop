@@ -4,5 +4,5 @@ using MicroShop.Core.Models;
 
 namespace MicroShop.CatalogService.Application.Features.Products.Requests.Managers.GetProducts
 {
-    public sealed record GetProductsManager : IManager<PagedList<ProductDto>> { }
+    public sealed record GetProductsManager : IManager<PagedListDto<ProductDto>> { }
 }
