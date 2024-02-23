@@ -17,4 +17,8 @@
     <ProjectReference Include="..\MicroShop.CatalogService.Domain.Entities\MicroShop.CatalogService.Domain.Entities.csproj" />
   </ItemGroup>
 
+	<ItemGroup>
+		<InternalsVisibleTo Include="MicroShop.CatalogService.Tests.Integration.Application.Features.ProductTypes" />
+	</ItemGroup>
+
 </Project>

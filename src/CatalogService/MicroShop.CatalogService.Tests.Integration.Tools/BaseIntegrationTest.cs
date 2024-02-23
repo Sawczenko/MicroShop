@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MicroShop.CatalogService.Database.Contexts;
+using Microsoft.Extensions.DependencyInjection;
 using MediatR;
-using MicroShop.CatalogService.Database.Contexts;
 using Xunit;
 
 namespace MicroShop.CatalogService.Tests.Integration.Tools;
@@ -27,7 +27,10 @@ public abstract class BaseIntegrationTest : IClassFixture<IntegrationTestWebAppF
         return DbContext;
     }
 
-    public Task InitializeAsync() => Task.CompletedTask;
+    public Task InitializeAsync()
+    {
+        return _resetDatabaseTask();
+    } 
 
     public async Task DisposeAsync()
     {

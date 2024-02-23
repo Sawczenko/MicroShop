@@ -1,13 +1,9 @@
-﻿using System.Text.Json;
-using MicroShop.CatalogService.Application.Features.Products.Requests.Managers.GetProducts;
+﻿using MicroShop.CatalogService.Application.Features.Products.Requests.Managers.GetProducts;
 using MicroShop.CatalogService.Domain.Entities.ProductBrands;
 using MicroShop.CatalogService.Domain.Entities.ProductTypes;
 using MicroShop.CatalogService.Domain.Entities.Products;
 using MicroShop.CatalogService.Tests.Integration.Tools;
 using FluentAssertions;
-using MicroShop.CatalogService.Application.DataTransferObjects;
-using MicroShop.Core.Models;
-using MicroShop.Core.Models.Responses;
 using Xunit;
 
 namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Products.Requests.Managers
@@ -17,8 +13,6 @@ namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Produc
         public GetProductsManagerTests(IntegrationTestWebAppFactory factory) : base(factory)
         {
         }
-
-        private readonly Uri getProductsUri = new Uri("api/Products", UriKind.Relative);
 
         [Fact]
         public async Task GetProducts_ShouldReturnProductDtoPagedList_WhenProductsAreInDatabase()
@@ -68,7 +62,6 @@ namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Produc
 
             dbContext.SaveChanges();
 
-            var product = dbContext.Set<Product>().First();
             var manager = new GetProductsManager();
 
             #endregion Arrange 
@@ -122,9 +115,9 @@ namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Produc
 
             #region Assert
 
+            pagedProductList.Should().NotBeNull();
             pagedProductList.Items.Should().NotBeNull();
-            pagedProductList.Items.Count.Should().Be(0);
-            pagedProductList.TotalCount.Should().Be(0);
+            pagedProductList.Items.Should().BeEmpty();
 
             #endregion
         }

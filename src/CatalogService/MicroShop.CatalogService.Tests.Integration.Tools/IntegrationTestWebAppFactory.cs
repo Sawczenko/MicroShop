@@ -10,6 +10,9 @@ using System.Data.Common;
 using Respawn;
 using MicroShop.Core.Interfaces.Database;
 using Microsoft.Data.SqlClient;
+using Respawn.Graph;
+using System.Collections.Generic;
+using System.Data;
 
 namespace MicroShop.CatalogService.Tests.Integration.Tools;
 
@@ -20,6 +23,7 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         .WithPassword("Strong_password_123!")
         .Build();
 
+    private SqlConnection sqlConnection;
     private DbConnection _dbConnection = default!;
     private Respawner _respawner = default!;
 
@@ -41,7 +45,7 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
     }
 
     public async Task InitializeAsync()
-    {  
+    {
         await _dbContainer.StartAsync();
         _dbConnection = new SqlConnection(_dbContainer.GetConnectionString());
 
@@ -51,12 +55,19 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
     private async Task InitializeRespawner()
     {
         await _dbConnection.OpenAsync();
+
+        var options = new DbContextOptionsBuilder<CatalogDbContext>().UseSqlServer(_dbContainer.GetConnectionString()).Options;
+
+        var dbContext = new CatalogDbContext(options);
+        dbContext.Database.EnsureCreated();
+
         _respawner = await Respawner.CreateAsync(_dbConnection, new RespawnerOptions
         {
+
             SchemasToInclude = new[]
-            {
-                "dbo"
-            },
+                {
+                    "dbo"
+                },
             DbAdapter = DbAdapter.SqlServer,
             CommandTimeout = 60
         });

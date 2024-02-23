@@ -4,7 +4,6 @@ using MicroShop.CatalogService.Domain.Entities.ProductBrands;
 using MicroShop.CatalogService.Domain.Entities.ProductTypes;
 using MicroShop.CatalogService.Domain.Entities.Products;
 using MicroShop.CatalogService.Tests.Integration.Tools;
-using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Products.Requests.Queries
@@ -18,7 +17,7 @@ namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Produc
         [Fact]
         public async Task GetProducts_ShouldReturnProducts_WhenProductsArePresentInDatabase()
         {
-            //Arrange
+            #region Arrange
             var dbContext = GetCatalogDbContext();
 
             var productBrand = new ProductBrand
@@ -46,13 +45,16 @@ namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Produc
             dbContext.SaveChanges();
 
             var query = new GetProductsQuery();
+            #endregion Arrange
 
+            #region Act
 
-            //Act
             var pagedProductList = await Sender.Send(query);
 
+            #endregion Act
 
-            //Assert
+            #region Assert
+
             pagedProductList.Items.Count.Should().Be(1);
 
             var actualProduct = pagedProductList.Items.First();
@@ -68,21 +70,34 @@ namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Produc
             actualProduct.Price.Should().Be(1);
 
             actualProduct.PictureUrl.Should().Be("Url");
+
+            #endregion Assert
         }
 
         [Fact]
         public async Task GetProducts_ShouldReturnEmptyList_WhenProductsAreNotPresentInDatabase()
         {
-            //Arrange
+            #region Arrange
+
             var dbContext = GetCatalogDbContext();
-            var test = dbContext.Database.GetConnectionString();
+
             var query = new GetProductsQuery();
-            //Act
+
+            #endregion Arrange
+
+            #region Act
+
             var pagedProductList = await Sender.Send(query);
 
-            //Assert
-            pagedProductList.Count.Should().Be(0);
-            pagedProductList.Items.FirstOrDefault().Should().Be(null);
+            #endregion Act
+
+            #region Assert
+
+            pagedProductList.Should().NotBeNull();
+            pagedProductList.Items.Should().NotBeNull();
+            pagedProductList.Items.Should().BeEmpty();
+
+            #endregion Assert
         }
     }
 }

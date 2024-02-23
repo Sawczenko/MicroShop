@@ -21,15 +21,15 @@ namespace MicroShop.CatalogService.Database.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //var productTypeSeed = new ProductTypeSeed();
-            //var productBrandSeed = new ProductBrandSeed();
-            //var productsSeed = new ProductSeed();
+            var productTypeSeed = new ProductTypeSeed();
+            var productBrandSeed = new ProductBrandSeed();
+            var productsSeed = new ProductSeed();
 
-            //modelBuilder.Entity<ProductType>().HasData(productTypeSeed.GetProductTypeSeeds());
+            modelBuilder.Entity<ProductType>().HasData(productTypeSeed.GetProductTypeSeeds());
 
-            //modelBuilder.Entity<ProductBrand>().HasData(productBrandSeed.GetProductBrandSeeds());
+            modelBuilder.Entity<ProductBrand>().HasData(productBrandSeed.GetProductBrandSeeds());
 
-            //modelBuilder.Entity<Product>().HasData(productsSeed.GetProductSeeds());
+            modelBuilder.Entity<Product>().HasData(productsSeed.GetProductSeeds());
         }
     }
 }

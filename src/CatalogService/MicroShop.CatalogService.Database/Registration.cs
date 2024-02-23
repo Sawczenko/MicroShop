@@ -26,7 +26,6 @@ public static class Registration
     {
         using (var scope = applicationBuilder.ApplicationServices.CreateScope())
         {
-            
             var context = scope.ServiceProvider.GetRequiredService<ICatalogDbContext>();
 
             context.Database.EnsureCreated();
