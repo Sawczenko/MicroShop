@@ -24,7 +24,17 @@ namespace MicroShop.IdentityService.Application.Features.Authentication.Requests
 
             var userExistsResult = await Validate(new UserExistsValidator(user, manager.Request.UserName), cancellationToken);
 
+            if (userExistsResult.IsFailure)
+            {
+                return Failure(userExistsResult);
+            }
+
             var userPasswordValidationResult = await Validate(new UserPasswordValidator(user, manager.Request), cancellationToken);
+
+            if (userPasswordValidationResult.IsFailure)
+            {
+                return Failure(userPasswordValidationResult);
+            }
 
             var userRoles = await Send(new GetUserRolesQuery(user), cancellationToken);
 

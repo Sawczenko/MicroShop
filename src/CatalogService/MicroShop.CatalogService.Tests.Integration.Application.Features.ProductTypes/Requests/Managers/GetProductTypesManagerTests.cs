@@ -1,8 +1,7 @@
-﻿using FluentAssertions;
-using MicroShop.CatalogService.Application.Features.Products.Requests.Managers.GetProducts;
-using MicroShop.CatalogService.Application.Features.ProductTypes.Requests.Managers.GetProductTypes;
+﻿using MicroShop.CatalogService.Application.Features.ProductTypes.Requests.Managers.GetProductTypes;
 using MicroShop.CatalogService.Domain.Entities.ProductTypes;
 using MicroShop.CatalogService.Tests.Integration.Tools;
+using FluentAssertions;
 using Xunit;
 
 namespace MicroShop.CatalogService.Tests.Integration.Application.Features.ProductTypes.Requests.Managers

@@ -1,6 +1,6 @@
-﻿using MicroShop.IdentityService.Application.Features.Authentication.Requests.Commands.CreateNewUser;
+﻿using MicroShop.IdentityService.Application.Features.Authentication.Requests.Validators.UserNotExists;
+using MicroShop.IdentityService.Application.Features.Authentication.Requests.Commands.CreateNewUser;
 using MicroShop.IdentityService.Application.Features.Authentication.Requests.Queries.GetUserByName;
-using MicroShop.IdentityService.Application.Features.Authentication.Requests.Validators.UserNotExists;
 using MicroShop.IdentityService.Application.Features.Authentication.Dtos;
 using MicroShop.Core.Interfaces.Containers.Requests.Manager;
 using MicroShop.Core.Abstractions.Requests.Manager;
