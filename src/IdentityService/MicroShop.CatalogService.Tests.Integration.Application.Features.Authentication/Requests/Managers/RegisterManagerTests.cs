@@ -20,7 +20,7 @@ namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Authen
         }
 
         [Fact]
-        public async Task RegisterUser_ShouldReturnUserCreatedSuccessfully_WhenUserMeetRequirements()
+        public async Task Register_ShouldReturnUserCreatedSuccessfully_WhenUserMeetRequirements()
         {
             #region Arrange
 
@@ -56,7 +56,7 @@ namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Authen
         }
 
         [Fact]
-        public async Task RegisterUser_ShouldReturnUserExistsError_WhenUserNameIsClaimed()
+        public async Task Register_ShouldReturnUserExistsError_WhenUserNameIsClaimed()
         {
             #region Arrange
 
@@ -97,7 +97,7 @@ namespace MicroShop.CatalogService.Tests.Integration.Application.Features.Authen
 
             errorResponse.Should().NotBeNull();
             errorResponse?.ErrorCode.Should().Be(AuthenticationErrors.MICROSHOP_USER_ALREADY_EXISTS);
-            errorResponse?.Message.Should().Be(AuthenticationErrors.MICROSHOP_USER_ALREADY_EXISTS.Message);
+            errorResponse?.Message.Should().Contain(userName);
 
             #endregion Assert
         }

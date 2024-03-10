@@ -32,7 +32,7 @@ namespace MicroShop.IdentityService.Tests.Unit.Application.Features.Authenticati
             //Assert
 
             result.Error.Name.Should().Be(nameof(AuthenticationErrors.MICROSHOP_USER_DOES_NOT_EXIST));
-            result.Error.Message.Should().Contain(userName);
+            result.Message.Should().Contain(userName);
             result.IsFailure.Should().BeTrue();
         }
 

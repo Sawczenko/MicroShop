@@ -50,7 +50,7 @@ namespace MicroShop.IdentityService.Tests.Unit.Application.Features.Authenticati
 
             //Assert
             result.Error.Name.Should().Be(nameof(AuthenticationErrors.MICROSHOP_USER_PASSWORD_IS_NOT_CORRECT));
-            result.Error.Message.Should().Contain(user.UserName);
+            result.Message.Should().Contain(user.UserName);
             result.IsFailure.Should().BeTrue();
         }
 
