@@ -19,7 +19,6 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         .WithPassword("Strong_password_123!")
         .Build();
 
-    private SqlConnection sqlConnection;
     private DbConnection _dbConnection = default!;
     private Respawner _respawner = default!;
 

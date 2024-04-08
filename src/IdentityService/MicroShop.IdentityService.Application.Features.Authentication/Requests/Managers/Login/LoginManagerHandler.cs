@@ -38,7 +38,7 @@ namespace MicroShop.IdentityService.Application.Features.Authentication.Requests
 
             var userRoles = await Send(new GetUserRolesQuery(user), cancellationToken);
 
-            var authClaimsResult = await Send(new CreateClaimsCommand(user.UserName, userRoles), cancellationToken);
+            var authClaimsResult = await Send(new CreateClaimsCommand(user, userRoles), cancellationToken);
 
             var tokenResult = await Send(new CreateTokenCommand(authClaimsResult.Result), cancellationToken);
 

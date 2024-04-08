@@ -21,8 +21,10 @@ namespace MicroShop.IdentityService.Application.Features.Authentication
                 options.RequireHttpsMetadata = false;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
+                    ValidateLifetime = true,
                     ValidateIssuer = true,
                     ValidateAudience = false,
+                    ValidateIssuerSigningKey = true,
                     ValidIssuer = configuration["JWT:ValidIssuer"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
                 };

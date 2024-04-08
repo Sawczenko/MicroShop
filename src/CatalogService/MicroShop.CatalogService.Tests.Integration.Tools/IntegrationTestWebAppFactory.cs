@@ -4,15 +4,11 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Data.SqlClient;
 using Testcontainers.MsSql;
-using Xunit;
 using System.Data.Common;
 using Respawn;
-using MicroShop.Core.Interfaces.Database;
-using Microsoft.Data.SqlClient;
-using Respawn.Graph;
-using System.Collections.Generic;
-using System.Data;
+using Xunit;
 
 namespace MicroShop.CatalogService.Tests.Integration.Tools;
 
@@ -23,7 +19,6 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         .WithPassword("Strong_password_123!")
         .Build();
 
-    private SqlConnection sqlConnection;
     private DbConnection _dbConnection = default!;
     private Respawner _respawner = default!;
 

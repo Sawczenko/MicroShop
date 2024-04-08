@@ -3,6 +3,7 @@ using MicroShop.IdentityService.Core.Containers;
 using MicroShop.Catalog.Application.Services;
 using MicroShop.Core.Features.Telemetry;
 using MicroShop.Core;
+using MicroShop.Core.Middlewares;
 using MicroShop.IdentityService.Database;
 
 
@@ -35,6 +36,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMicroShopCoreErrorHandlingMiddleware();
 
 app.UseHttpsRedirection();
 

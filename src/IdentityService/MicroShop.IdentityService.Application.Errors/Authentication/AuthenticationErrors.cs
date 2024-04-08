@@ -21,7 +21,6 @@ namespace MicroShop.IdentityService.Application.Errors.Authentication
 
         #endregion 
 
-        public string Message { get; protected set; }
         public override HttpStatusCode HttpStatusCode { get; }
 
         public AuthenticationErrors(string name, int value) : base(name, value) { }

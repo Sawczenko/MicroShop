@@ -4,6 +4,7 @@ using MicroShop.CatalogService.Application.Features.Products;
 using MicroShop.CatalogService.Core.Containers;
 using MicroShop.Catalog.Application.Services;
 using MicroShop.Core.Features.Telemetry;
+using MicroShop.Core.Middlewares;
 using MicroShop.Core;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -51,6 +52,8 @@ if (app.Environment.IsDevelopment())
 
     app.SeedDatabase();
 }
+
+app.UseMicroShopCoreErrorHandlingMiddleware();
 
 app.UseHttpsRedirection();
 

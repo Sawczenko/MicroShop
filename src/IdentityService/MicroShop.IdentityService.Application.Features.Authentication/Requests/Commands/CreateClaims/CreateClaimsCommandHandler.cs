@@ -11,8 +11,9 @@ internal sealed class CreateClaimsCommandHandler : CommandHandlerBase<CreateClai
     {
         var authClaims = new List<Claim>()
         {
-            new Claim(ClaimTypes.Name, command.UserName),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            new Claim(ClaimTypes.Name, command.User.UserName),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new Claim(JwtRegisteredClaimNames.Email, command.User.Email)
         };
 
         foreach (var role in command.UserRoles)

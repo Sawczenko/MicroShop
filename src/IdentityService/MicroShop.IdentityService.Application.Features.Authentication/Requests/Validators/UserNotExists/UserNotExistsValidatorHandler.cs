@@ -6,13 +6,13 @@ namespace MicroShop.IdentityService.Application.Features.Authentication.Requests
 
 internal sealed class UserNotExistsValidatorHandler : ValidatorHandlerBase<UserNotExistsValidator>
 {
-    public override async Task<RequestResult> Handle(UserNotExistsValidator validator, CancellationToken cancellationToken)
+    public override Task<RequestResult> Handle(UserNotExistsValidator validator, CancellationToken cancellationToken)
     {
         if (validator.MicroShopUser is not null)
         {
-            return RequestResult.Failure(AuthenticationErrors.MICROSHOP_USER_ALREADY_EXISTS, validator.UserName);
+            return Task.FromResult(RequestResult.Failure(AuthenticationErrors.MICROSHOP_USER_ALREADY_EXISTS, validator.UserName));
         }
 
-        return RequestResult.Success();
+        return Task.FromResult(RequestResult.Success());
     }
 }

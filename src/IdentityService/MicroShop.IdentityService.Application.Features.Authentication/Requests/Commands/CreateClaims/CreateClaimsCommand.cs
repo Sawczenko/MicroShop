@@ -1,17 +1,18 @@
 ﻿using System.Security.Claims;
 using MicroShop.Core.Interfaces.Requests.Command;
+using MicroShop.IdentityService.Domain.Entities.Users;
 
 namespace MicroShop.IdentityService.Application.Features.Authentication.Requests.Commands.CreateClaims;
 
 internal sealed record CreateClaimsCommand : ICommand<IList<Claim>>
 {
-    internal string UserName { get; }
+    internal MicroShopUser User { get; }
 
     internal IList<string> UserRoles { get; }
 
-    public CreateClaimsCommand(string userName, IList<string> userRoles)
+    public CreateClaimsCommand(MicroShopUser user, IList<string> userRoles)
     {
-        UserName = userName;
+        User = user;
         UserRoles = userRoles;
     }
 }
