@@ -113,6 +113,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{89
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroShop.CatalogService.Tests.Integration.Application.Features.Authentication", "src\IdentityService\MicroShop.CatalogService.Tests.Integration.Application.Features.Authentication\MicroShop.CatalogService.Tests.Integration.Application.Features.Authentication.csproj", "{AA01038D-114C-462D-9A46-64A809CF1F87}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{50129A21-002F-40CC-9092-8F9E9D5B73A5}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
